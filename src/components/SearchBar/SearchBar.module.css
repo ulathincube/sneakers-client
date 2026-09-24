@@ -18,5 +18,5 @@
   flex: 1;
   padding: var(--spacing-10);
   border-radius: var(--radius-5);
-  border: var(--simple-border);
+  border: var(--darker-border);
 }

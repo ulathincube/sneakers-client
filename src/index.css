@@ -6,11 +6,15 @@
   --font-weight-default: 500;
   --spacing-5: 5px;
   --spacing-10: 10px;
+  --spacing-15: 15px;
   --spacing-20: 20px;
+  --spacing-40: 40px;
   --radius-5: 5px;
   --radius-10: 10px;
-  --gray: hsl(0deg 5% 75%);
+  --gray: hsl(0deg 0% 75%);
+  --dark-gray: hsl(0deg 0% 55%);
   --simple-border: 1px solid var(--gray);
+  --darker-border: 1px solid var(--dark-gray);
 }
 
 html,
@@ -21,7 +25,6 @@ body {
 body {
   font-family: var(--font-stack);
   font-size: var(--font-size-default);
-  padding: var(--spacing-20);
   font-weight: var(--font-weight-default);
 }
 

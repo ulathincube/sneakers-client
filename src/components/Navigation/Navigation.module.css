@@ -6,7 +6,7 @@
 
 .navigation {
   list-style: none;
-  gap: var(--spacing-20);
+  gap: var(--spacing-40);
   justify-content: flex-end;
 }
 
