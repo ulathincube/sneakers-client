@@ -1,3 +1,3 @@
-# React with Typescript Boilerplate
+# Sneakers Client
 
-This is my starter React Boilerplate project, using Typescript.
+Fetch data from the sneakers api
