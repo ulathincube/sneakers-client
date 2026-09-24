@@ -1,0 +1,28 @@
+.wrapper,
+.categories {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.wrapper {
+  padding: var(--spacing-20);
+  border-bottom: var(--simple-border);
+}
+
+.categories {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-100);
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sale:link,
+.sale:visited {
+  text-decoration: none;
+  color: var(--highlight);
+}

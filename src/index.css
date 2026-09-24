@@ -1,17 +1,20 @@
 :root {
   --font-stack: "Figtree", "Arial", "Helvetica", sans-serif;
-  --font-size-default: 1rem;
+  --font-size-default: 1.3rem;
   --font-size-medium: 1.5rem;
   --font-size-large: 3rem;
-  --font-weight-default: 500;
+  --font-weight-default: 400;
   --spacing-5: 5px;
   --spacing-10: 10px;
   --spacing-15: 15px;
   --spacing-20: 20px;
   --spacing-40: 40px;
+  --spacing-60: 60px;
+  --spacing-100: 100px;
   --radius-5: 5px;
   --radius-10: 10px;
   --gray: hsl(0deg 0% 75%);
+  --highlight: hsl(0deg 100% 50%);
   --dark-gray: hsl(0deg 0% 55%);
   --simple-border: 1px solid var(--gray);
   --darker-border: 1px solid var(--dark-gray);
