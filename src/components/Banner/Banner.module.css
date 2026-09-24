@@ -1,0 +1,26 @@
+.wrapper {
+  min-height: 300px;
+  background-color: var(--gray);
+  border-radius: var(--radius-5);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--spacing-60);
+  padding: var(--spacing-60);
+  color: var(--white);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-30);
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--black);
+  padding: var(--spacing-10) var(--spacing-30);
+  border-radius: var(--radius-5);
+}

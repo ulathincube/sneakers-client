@@ -8,12 +8,15 @@
   --spacing-10: 10px;
   --spacing-15: 15px;
   --spacing-20: 20px;
+  --spacing-30: 30px;
   --spacing-40: 40px;
   --spacing-60: 60px;
   --spacing-100: 100px;
   --radius-5: 5px;
   --radius-10: 10px;
   --gray: hsl(0deg 0% 75%);
+  --white: hsl(0deg 0% 95%);
+  --black: hsl(0deg 0% 10%);
   --highlight: hsl(0deg 100% 50%);
   --dark-gray: hsl(0deg 0% 55%);
   --simple-border: 1px solid var(--gray);
