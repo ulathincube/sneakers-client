@@ -1,0 +1,16 @@
+.wrapper,
+.navigation {
+  display: flex;
+  flex: 1;
+}
+
+.navigation {
+  list-style: none;
+  gap: var(--spacing-20);
+  justify-content: flex-end;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

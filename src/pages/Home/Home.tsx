@@ -1,7 +1,12 @@
 import styles from "./Home.module.css"
+import Header from "../../components/Header"
 
 function Home() {
-  return <div className={styles.wrapper}>Home is where the heart is</div>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
 export default Home

@@ -1,0 +1,4 @@
+.wrapper {
+  font-size: var(--font-size-medium);
+  flex: 1;
+}

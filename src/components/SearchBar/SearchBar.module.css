@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex: 2;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+}
+
+.group {
+  flex: 1;
+  display: flex;
+}
+
+.field {
+  flex: 1;
+  padding: var(--spacing-10);
+  border-radius: var(--radius-5);
+  border: var(--simple-border);
+}

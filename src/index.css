@@ -1,6 +1,16 @@
 :root {
-  --font-stack: 'Reddit Sans', 'Arial', 'Helvetica', sans-serif;
+  --font-stack: "Figtree", "Arial", "Helvetica", sans-serif;
   --font-size-default: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 3rem;
+  --font-weight-default: 500;
+  --spacing-5: 5px;
+  --spacing-10: 10px;
+  --spacing-20: 20px;
+  --radius-5: 5px;
+  --radius-10: 10px;
+  --gray: hsl(0deg 5% 75%);
+  --simple-border: 1px solid var(--gray);
 }
 
 html,
@@ -11,6 +21,8 @@ body {
 body {
   font-family: var(--font-stack);
   font-size: var(--font-size-default);
+  padding: var(--spacing-20);
+  font-weight: var(--font-weight-default);
 }
 
 #root {
