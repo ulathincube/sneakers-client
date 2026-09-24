@@ -1,0 +1,11 @@
+.wrapper {
+  min-width: 100%;
+  padding: var(--spacing-20);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-20);
+  list-style: none;
+}

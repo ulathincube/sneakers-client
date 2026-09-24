@@ -4,6 +4,7 @@
   --font-size-medium: 1.5rem;
   --font-size-large: 3rem;
   --font-weight-default: 400;
+  --spacing-3: 3px;
   --spacing-5: 5px;
   --spacing-10: 10px;
   --spacing-15: 15px;
@@ -36,4 +37,13 @@ body {
 
 #root {
   min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-default);
 }

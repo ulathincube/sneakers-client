@@ -1,0 +1,22 @@
+.wrapper {
+  height: 200px;
+}
+
+.title {
+  grid-column: 1 / -1;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: var(--spacing-10) var(--spacing-20);
+}
+
+.category {
+  color: var(--dark-gray);
+}
+
+.price {
+  color: var(--dark-gray);
+  justify-self: end;
+}
