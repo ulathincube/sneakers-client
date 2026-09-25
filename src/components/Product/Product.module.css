@@ -1,5 +1,6 @@
 .wrapper {
-  height: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -10,6 +11,27 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: var(--spacing-10) var(--spacing-20);
+}
+
+.link,
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.container {
+  border-radius: var(--radius-5);
+  overflow: hidden;
+}
+
+.link {
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .category {

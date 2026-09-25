@@ -9,6 +9,10 @@ function Main() {
         <Product />
         <Product />
         <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
       </ul>
     </main>
   )

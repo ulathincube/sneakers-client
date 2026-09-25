@@ -15,6 +15,7 @@
   --spacing-100: 100px;
   --radius-5: 5px;
   --radius-10: 10px;
+  --grid-auto-row: 500px;
   --gray: hsl(0deg 0% 75%);
   --white: hsl(0deg 0% 95%);
   --black: hsl(0deg 0% 10%);
