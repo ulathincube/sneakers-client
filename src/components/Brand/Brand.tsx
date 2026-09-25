@@ -10,7 +10,7 @@ interface SneakerBrand {
 function Brand({ id, name, logo }: SneakerBrand) {
   return (
     <li className={styles.wrapper}>
-      <Link to={`/brands/${id}`}>
+      <Link className={styles.link} to={`/brands/${id}`}>
         <img src={logo} className={styles.logo} alt={name} />
       </Link>
     </li>

@@ -1,0 +1,17 @@
+.wrapper {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-5);
+  overflow: hidden;
+}
+
+.wrapper,
+.link {
+  display: flex;
+  flex: 1;
+}
+
+.logo {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
