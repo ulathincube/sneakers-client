@@ -4,7 +4,7 @@
 
 .brands {
   display: grid;
-  grid-template-columns: repeat(5, 200px);
+  grid-template-columns: repeat(4, 200px);
   justify-content: center;
   /* grid-auto-rows: 100px; */
   gap: var(--spacing-40);
