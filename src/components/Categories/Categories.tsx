@@ -16,7 +16,7 @@ function Categories() {
           </Link>
         </li>
         <li className={styles.category}>
-          <Link to="/" className={styles.link}>
+          <Link to="/brands" className={styles.link}>
             Brands
           </Link>
         </li>
