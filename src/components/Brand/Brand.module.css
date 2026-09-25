@@ -10,6 +10,10 @@
   flex: 1;
 }
 
+.link {
+  flex-direction: column;
+}
+
 .logo {
   object-fit: cover;
   width: 100%;
