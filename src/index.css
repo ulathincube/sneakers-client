@@ -5,6 +5,7 @@
   --font-size-large: 3rem;
   --font-weight-default: 400;
   --font-weight-light: 300;
+
   --font-weight-super-light: 200;
   --spacing-3: 3px;
   --spacing-5: 5px;
@@ -18,6 +19,7 @@
   --radius-5: 5px;
   --radius-10: 10px;
   --grid-auto-row: 500px;
+  --link-color: hsl(300deg 100% 50%);
   --gray: hsl(0deg 0% 75%);
   --white: hsl(0deg 0% 95%);
   --black: hsl(0deg 0% 10%);
@@ -40,6 +42,8 @@ body {
 
 #root {
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
