@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import SingleProduct from "./pages/SingleProduct"
 import Brands from "./pages/Brands"
 import NotFound from "./pages/NotFound"
+import Brand from "./pages/Brand"
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="sneakers/:sneakerId" element={<SingleProduct />} />
-        <Route path="brands" element={<Brands />} />
+        <Route path="brands">
+          <Route index element={<Brands />} />
+          <Route path="/brands/:brandId" element={<Brand />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

@@ -1,0 +1,12 @@
+.wrapper {
+  min-width: 100%;
+  padding: var(--spacing-40) var(--spacing-20);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: var(--grid-auto-row);
+  gap: var(--spacing-30);
+  list-style: none;
+}
