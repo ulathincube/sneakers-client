@@ -16,6 +16,11 @@ function Categories() {
           </Link>
         </li>
         <li className={styles.category}>
+          <Link to="/" className={styles.link}>
+            Brands
+          </Link>
+        </li>
+        <li className={styles.category}>
           <Link to="/" className={styles.sale}>
             Sale
           </Link>
