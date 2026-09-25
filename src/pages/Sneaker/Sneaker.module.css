@@ -1,0 +1,76 @@
+.wrapper {
+  min-width: 100%;
+  padding: var(--spacing-20);
+  display: flex;
+  gap: var(--spacing-20);
+}
+
+.container {
+  flex: 2;
+  display: grid;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-width: 100%;
+  gap: var(--spacing-10);
+  list-style: none;
+}
+
+.sidebar {
+  flex: 1;
+  padding: var(--spacing-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-40);
+}
+
+.title {
+  font-size: var(--font-size-large);
+}
+
+.text {
+  font-size: var(--font-size-medium);
+}
+
+.price {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-super-light);
+}
+
+.image {
+  width: 100%;
+  display: block;
+}
+
+.sizes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-auto-rows: 45px;
+  gap: var(--spacing-10);
+}
+
+.size {
+  width: 100%;
+  height: 100%;
+  border: var(--simple-border);
+  padding: var(--spacing-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-5);
+}
+
+.actions {
+  display: flex;
+
+  gap: var(--spacing-20);
+}
+
+.add,
+.favourite {
+  border-radius: var(--radius-5);
+  padding: var(--spacing-10) var(--spacing-20);
+  border: none;
+}
