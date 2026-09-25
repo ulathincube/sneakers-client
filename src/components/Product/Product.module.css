@@ -5,6 +5,7 @@
 
 .title {
   grid-column: 1 / -1;
+  font-weight: var(--font-weight-light);
 }
 
 .details {
@@ -36,9 +37,11 @@
 
 .category {
   color: var(--dark-gray);
+  font-weight: var(--font-weight-super-light);
 }
 
 .price {
   color: var(--dark-gray);
   justify-self: end;
+  font-weight: var(--font-weight-super-light);
 }

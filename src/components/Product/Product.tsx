@@ -15,7 +15,7 @@ function Product() {
       <article className={styles.details}>
         <h3 className={styles.title}>Nike Sneakers</h3>
         <p className={styles.category}>Trainers</p>
-        <p className={styles.price}>200</p>
+        <p className={styles.price}>$200</p>
       </article>
     </li>
   )
