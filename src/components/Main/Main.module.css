@@ -9,4 +9,5 @@
   grid-auto-rows: var(--grid-auto-row);
   gap: var(--spacing-30);
   list-style: none;
+  overflow: hidden;
 }

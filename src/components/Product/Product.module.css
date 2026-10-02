@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .title {
@@ -27,12 +28,14 @@
 
 .link {
   overflow: hidden;
+  min-width: 100%;
 }
 
 .image {
   display: block;
   width: 100%;
   object-fit: cover;
+  transition: transform 500ms ease-out;
 }
 
 .category {
@@ -44,4 +47,8 @@
   color: var(--dark-gray);
   justify-self: end;
   font-weight: var(--font-weight-super-light);
+}
+
+.link:hover .image {
+  transform: scale(1.5);
 }
