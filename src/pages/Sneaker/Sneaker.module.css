@@ -1,8 +1,8 @@
 .wrapper {
   min-width: 100%;
-  padding: var(--spacing-20);
+  padding: var(--spacing-60);
   display: flex;
-  gap: var(--spacing-20);
+  gap: var(--spacing-60);
 }
 
 .container {
@@ -13,9 +13,13 @@
 .images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-20);
   min-width: 100%;
-  gap: var(--spacing-10);
   list-style: none;
+}
+
+.item {
+  aspect-ratio: 1 / 1;
 }
 
 .sidebar {
