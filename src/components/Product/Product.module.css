@@ -2,17 +2,19 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  aspect-ratio: 4 /3;
 }
 
 .title {
   grid-column: 1 / -1;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-light-bold);
+  font-size: var(--font-size-default);
 }
 
 .details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: var(--spacing-10) var(--spacing-20);
+  padding: var(--spacing-10) 0;
 }
 
 .link,
@@ -22,7 +24,7 @@
 }
 
 .container {
-  border-radius: var(--radius-5);
+  /* border-radius: var(--radius-5); */
   overflow: hidden;
 }
 
