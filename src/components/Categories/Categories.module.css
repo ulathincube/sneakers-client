@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  padding: var(--spacing-20);
+  padding: var(--spacing-20) var(--spacing-60);
   border-bottom: var(--simple-border);
 }
 
