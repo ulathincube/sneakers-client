@@ -37,7 +37,6 @@
   display: block;
   width: 100%;
   object-fit: cover;
-  transition: transform 500ms ease-out;
 }
 
 .category {
@@ -49,8 +48,4 @@
   color: var(--dark-gray);
   justify-self: end;
   font-weight: var(--font-weight-super-light);
-}
-
-.link:hover .image {
-  transform: scale(1.5);
 }
