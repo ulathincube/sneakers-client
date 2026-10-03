@@ -12,6 +12,7 @@ function Brand({ id, name, logo }: SneakerBrand) {
     <li className={styles.wrapper}>
       <Link className={styles.link} to={`/brands/${id}`}>
         <img src={logo} className={styles.logo} alt={name} />
+        <span className={styles.name}>{name}</span>
       </Link>
     </li>
   )
