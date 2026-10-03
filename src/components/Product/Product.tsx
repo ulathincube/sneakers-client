@@ -13,15 +13,16 @@ function Product({ id, url, name, category, price }: Props) {
   return (
     <li className={styles.wrapper}>
       <Link to={`/sneakers/${id}`} className={styles.link}>
-        <span className={styles.container}>
+        <article className={styles.container}>
           <img className={styles.image} src={url} alt={name} />
-        </span>
+        </article>
+
+        <article className={styles.details}>
+          <h3 className={styles.title}>{name}</h3>
+          <p className={styles.category}>{category}</p>
+          <p className={styles.price}>${price}</p>
+        </article>
       </Link>
-      <article className={styles.details}>
-        <h3 className={styles.title}>{name}</h3>
-        <p className={styles.category}>{category}</p>
-        <p className={styles.price}>${price}</p>
-      </article>
     </li>
   )
 }

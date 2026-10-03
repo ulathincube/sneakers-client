@@ -5,9 +5,9 @@
 
 .products {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, var(--grid-image));
   /* grid-auto-rows: var(--grid-auto-row); */
-  gap: var(--spacing-30);
+  gap: var(--spacing-20);
   list-style: none;
   overflow: hidden;
 }

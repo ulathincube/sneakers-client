@@ -2,19 +2,18 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  aspect-ratio: 4 /3;
 }
 
 .title {
   grid-column: 1 / -1;
   font-weight: var(--font-weight-light-bold);
-  font-size: var(--font-size-default);
+  font-size: 1.1rem;
 }
 
 .details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: var(--spacing-10) 0;
+  padding: var(--spacing-10);
 }
 
 .link,
@@ -23,9 +22,18 @@
   flex: 1;
 }
 
+.link {
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   /* border-radius: var(--radius-5); */
   overflow: hidden;
+  width: var(--grid-image);
+  height: var(--grid-image);
+  border-radius: var(--radius-10);
 }
 
 .link {
@@ -41,11 +49,9 @@
 
 .category {
   color: var(--dark-gray);
-  font-weight: var(--font-weight-super-light);
 }
 
 .price {
-  color: var(--dark-gray);
   justify-self: end;
-  font-weight: var(--font-weight-super-light);
+  font-weight: var(--font-weight-light-bold);
 }
