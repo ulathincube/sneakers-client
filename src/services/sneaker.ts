@@ -21,7 +21,18 @@ interface AllSneakersResponse {
   message: string
 }
 
+interface SneakerResponse {
+  data: Sneaker
+  error: Error | null
+  message: string
+}
+
 export async function getAllSneakers(): Promise<AllSneakersResponse> {
   const response = await api.get("/sneakers")
+  return response.data
+}
+
+export async function getSneaker(id: string): Promise<SneakerResponse> {
+  const response = await api.get(`/sneakers/${id}`)
   return response.data
 }
