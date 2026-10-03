@@ -1,21 +1,26 @@
 import styles from "./Product.module.css"
 import { Link } from "react-router"
 
-function Product() {
+interface Props {
+  id: string
+  name: string
+  category: string
+  price: number
+  url: string
+}
+
+function Product({ id, url, name, category, price }: Props) {
   return (
     <li className={styles.wrapper}>
-      <Link to="/" className={styles.link}>
+      <Link to={`/sneakers/${id}`} className={styles.link}>
         <span className={styles.container}>
-          <img
-            className={styles.image}
-            src="/assets/images/nike-sneakers.webp"
-          />
+          <img className={styles.image} src={url} alt={name} />
         </span>
       </Link>
       <article className={styles.details}>
-        <h3 className={styles.title}>Nike Sneakers</h3>
-        <p className={styles.category}>Trainers</p>
-        <p className={styles.price}>$200</p>
+        <h3 className={styles.title}>{name}</h3>
+        <p className={styles.category}>{category}</p>
+        <p className={styles.price}>${price}</p>
       </article>
     </li>
   )
