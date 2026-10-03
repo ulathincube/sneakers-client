@@ -5,13 +5,18 @@ interface Picture {
   url: string
 }
 
+interface Detail {
+  id: string
+  size: number
+  quantity: number
+  inStock: boolean
+}
+
 interface Sneaker {
   id: string
   name: string
-  size: number
-  quantity: number
   price: number
-  inStock: boolean
+  details: Detail[]
   pictures: Picture[]
 }
 
