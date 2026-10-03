@@ -7,15 +7,17 @@ import { useQuery } from "@tanstack/react-query"
 import { useParams } from "react-router"
 
 function Brand() {
-  const { id } = useParams()
+  const { brandId } = useParams()
 
   const { isPending, isError, error, data } = useQuery({
-    queryKey: ["sneakers", id],
-    queryFn: () => getBrandProducts(id!),
+    queryKey: ["sneakers", brandId],
+    queryFn: () => getBrandProducts(brandId!),
   })
 
   if (isPending) return <div>...Loading...</div>
   if (isError) return <div>{error.message}</div>
+
+  console.log({ data, brandId })
 
   return (
     <>
