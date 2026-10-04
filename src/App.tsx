@@ -4,6 +4,7 @@ import Brands from "./pages/Brands"
 import NotFound from "./pages/NotFound"
 import Brand from "./pages/Brand"
 import Sneaker from "./pages/Sneaker"
+import Cart from "./pages/Cart"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Brands />} />
           <Route path="/brands/:brandId" element={<Brand />} />
         </Route>
+        <Route path="cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
