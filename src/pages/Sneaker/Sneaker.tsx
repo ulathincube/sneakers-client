@@ -4,6 +4,7 @@ import Footer from "../../components/Footer"
 import { useParams } from "react-router"
 import { useQuery } from "@tanstack/react-query"
 import { getSneaker } from "../../services/sneaker"
+import { StarFilledIcon, BackpackIcon, HeartIcon } from "@radix-ui/react-icons"
 
 function Sneaker() {
   const { sneakerId } = useParams()
@@ -12,6 +13,8 @@ function Sneaker() {
     queryKey: ["getSneaker", sneakerId],
     queryFn: () => getSneaker(sneakerId!),
   })
+
+  const onButtonClick = () => {}
 
   if (isPending) return <div>...Loading...</div>
   if (isError) return <div>{error.message}</div>
@@ -36,7 +39,23 @@ function Sneaker() {
         <aside className={styles.sidebar}>
           <section className={styles.details}>
             <h3 className={styles.title}>{data.data.name}</h3>
-            <p className={styles.text}>{data.data.name}</p>
+            <ul className={styles.stars}>
+              <li className={styles.star}>
+                <StarFilledIcon className={styles.icon} />
+              </li>
+              <li className={styles.star}>
+                <StarFilledIcon className={styles.icon} />
+              </li>
+              <li className={styles.star}>
+                <StarFilledIcon className={styles.icon} />
+              </li>
+              <li className={styles.star}>
+                <StarFilledIcon className={styles.icon} />
+              </li>
+              <li className={styles.star}>
+                <StarFilledIcon className={styles.icon} />
+              </li>
+            </ul>
             <p className={styles.price}>${data.data.price}</p>
           </section>
           <section className={styles.sizes}>
@@ -50,8 +69,18 @@ function Sneaker() {
             <button className={styles.size}>13</button>
           </section>
           <section className={styles.actions}>
-            <button className={styles.add}>Add to Bag</button>
-            <button className={styles.favourite}>Favourite</button>
+            <button className={styles.add}>
+              <span className={styles.text}>Add to Cart</span>
+              <span className={styles.box}>
+                <BackpackIcon className={styles.icon} />
+              </span>
+            </button>
+            <button className={styles.favourite}>
+              <span className={styles.text}>Favourite</span>
+              <span className={styles.box}>
+                <HeartIcon className={styles.icon} />
+              </span>
+            </button>
           </section>
         </aside>
       </main>
