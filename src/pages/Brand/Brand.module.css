@@ -5,8 +5,8 @@
 
 .products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: var(--grid-auto-row);
+  grid-template-columns: repeat(6, var(--grid-image));
+  grid-auto-rows: var(--grid-image);
   gap: var(--spacing-30);
   list-style: none;
 }

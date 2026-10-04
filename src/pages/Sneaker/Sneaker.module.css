@@ -20,7 +20,7 @@
 
 .item {
   aspect-ratio: 1 / 1;
-  border-radius: var(--radius-5);
+  border-radius: var(--radius-15);
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@
   padding: var(--spacing-20);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-40);
+  gap: var(--spacing-30);
 }
 
 .details {
@@ -40,6 +40,7 @@
 
 .title {
   font-size: var(--font-size-large);
+  font-weight: var(--font-weight-light-bold);
 }
 
 .stars {
@@ -60,9 +61,9 @@
 
 .sizes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, 60px);
   grid-auto-rows: 45px;
-  gap: var(--spacing-10);
+  gap: var(--spacing-15);
 }
 
 .size {
@@ -79,6 +80,33 @@
 .active {
   background-color: var(--black);
   color: var(--white);
+}
+
+.group {
+  background-color: var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-5);
+}
+
+.group:has(.field:checked) {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.label {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.field {
+  visibility: hidden;
+  display: none;
 }
 
 .actions {
