@@ -5,8 +5,11 @@
 
 .products {
   display: grid;
-  grid-template-columns: repeat(6, var(--grid-image));
-  grid-auto-rows: var(--grid-image);
-  gap: var(--spacing-30);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-image), var(--grid-image))
+  );
+  gap: var(--spacing-20);
+  /* grid-auto-rows: var(--grid-image); */
   list-style: none;
 }
