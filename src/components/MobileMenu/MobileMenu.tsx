@@ -9,6 +9,7 @@ function MobileMenu() {
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false)
 
   const onShowNavigation = () => setShowMobileNav(true)
+  const onHideNavigation = () => setShowMobileNav(false)
 
   useEffect(() => {
     if (showMobileNav) {
@@ -29,7 +30,9 @@ function MobileMenu() {
       <button onClick={onShowNavigation} className={styles.button}>
         <TextAlignJustifyIcon className={styles.icon} />
       </button>
-      {showMobileNav && <MobileNavigation />}
+      {showMobileNav && (
+        <MobileNavigation onHideNavigation={onHideNavigation} />
+      )}
     </article>
   )
 }

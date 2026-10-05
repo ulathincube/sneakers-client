@@ -15,6 +15,16 @@
   flex-direction: column;
   justify-content: center;
   max-width: 85%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
 }
 
 .list {

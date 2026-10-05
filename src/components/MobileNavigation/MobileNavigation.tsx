@@ -1,14 +1,21 @@
 import styles from "./MobileNavigation.module.css"
 import { createPortal } from "react-dom"
 import { Link } from "react-router"
-import { CaretRightIcon } from "@radix-ui/react-icons"
+import { CaretRightIcon, Cross2Icon } from "@radix-ui/react-icons"
 
 const container: HTMLElement = document.getElementById("modal")!
 
-function MobileNavigationChildren() {
+interface Props {
+  onHideNavigation: () => void
+}
+
+function MobileNavigationChildren({ onHideNavigation }: Props) {
   return (
     <div className={styles.overlay}>
       <article className={styles.wrapper}>
+        <button onClick={onHideNavigation} className={styles.close}>
+          <Cross2Icon className={styles.icon} />
+        </button>
         <section>
           <ul className={styles.list}>
             <li className={styles.item}>
@@ -50,8 +57,11 @@ function MobileNavigationChildren() {
   )
 }
 
-function MobileNavigation() {
-  return createPortal(<MobileNavigationChildren />, container)
+function MobileNavigation({ onHideNavigation }: Props) {
+  return createPortal(
+    <MobileNavigationChildren onHideNavigation={onHideNavigation} />,
+    container
+  )
 }
 
 export default MobileNavigation
