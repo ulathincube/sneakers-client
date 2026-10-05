@@ -1,8 +1,30 @@
 .wrapper {
-  display: block;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--spacing-20);
+  padding: var(--spacing-60);
 }
 
 .cart {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: var(--grid-image-small) 1fr var(--grid-image-small);
+  gap: var(--spacing-20);
+  grid-auto-rows: var(--grid-image-small);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-10);
+}
+
+.checkout,
+.paypal {
+  padding: var(--spacing-10);
 }

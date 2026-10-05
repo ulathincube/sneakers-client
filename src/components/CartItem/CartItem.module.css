@@ -1,3 +1,19 @@
-.wrapper {
-  display: block;
+.box {
+  background-color: var(--gray);
+}
+
+.name,
+.size {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+.price {
+  justify-self: end;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 500;
 }
