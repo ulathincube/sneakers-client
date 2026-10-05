@@ -5,7 +5,7 @@ function CartDetails() {
   return (
     <main className={styles.wrapper}>
       <section className={styles.cart}>
-        <CartItem />
+        <CartItem url="https://picsum.photos/seed/mevSGUs1/500/500" />
       </section>
       <aside className={styles.sidebar}>
         <h3 className={styles.title}>Summary</h3>

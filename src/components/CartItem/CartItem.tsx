@@ -1,10 +1,14 @@
 import styles from "./CartItem.module.css"
 
-function CartItem() {
+interface Props {
+  url: string
+}
+
+function CartItem({ url }: Props) {
   return (
     <>
       <div className={styles.box}>
-        <img className={styles.image} src="" alt="product photo" />
+        <img className={styles.image} src={url} alt="product photo" />
       </div>
       <div className={styles.name}>
         <h2 className={styles.title}>Nike Air Force 01</h2>
@@ -16,7 +20,7 @@ function CartItem() {
         </p>
       </div>
       <div className={styles.price}>
-        <p className={styles.number}>$55</p>
+        <p className={styles.number}>$55.00</p>
       </div>
     </>
   )

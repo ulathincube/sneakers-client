@@ -1,8 +1,9 @@
 .wrapper {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: var(--spacing-20);
+  gap: var(--spacing-60);
   padding: var(--spacing-60);
+  font-size: 1.1rem;
 }
 
 .cart {
@@ -18,13 +19,19 @@
   gap: var(--spacing-20);
 }
 
+.title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-light-bold);
+}
+
 .list {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  gap: var(--spacing-10) 0;
 }
 
 .tag {
-  font-weight: var(--font-weight-light-bold);
+  font-weight: var(--font-weight-default);
 }
 
 .description {
