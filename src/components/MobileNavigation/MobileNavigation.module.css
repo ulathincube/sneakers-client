@@ -1,9 +1,20 @@
+.overlay {
+  background-color: var(--overlay);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .wrapper {
   padding: var(--spacing-60);
   animation: slide-in 1000ms ease-out both;
   background-color: var(--white);
   backdrop-filter: blur(5px);
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 85%;
 }
 
 .list {
@@ -21,6 +32,16 @@
   display: flex;
   gap: var(--spacing-5);
   align-items: center;
+}
+
+.text {
+  flex-basis: 200px;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .icon {

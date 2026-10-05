@@ -7,44 +7,46 @@ const container: HTMLElement = document.getElementById("modal")!
 
 function MobileNavigationChildren() {
   return (
-    <article className={styles.wrapper}>
-      <section>
-        <ul className={styles.list}>
-          <li className={styles.item}>
-            <Link className={styles.link} to="/">
-              <span className={styles.text}>My Account</span>
-              <span className={styles.box}>
-                <CaretRightIcon className={styles.icon} />
-              </span>
-            </Link>
-          </li>
-          <li className={styles.item}>
-            <Link className={styles.link} to="/">
-              <span className={styles.text}>Wallet</span>
-              <span className={styles.box}>
-                <CaretRightIcon className={styles.icon} />
-              </span>
-            </Link>
-          </li>
-          <li className={styles.item}>
-            <Link className={styles.link} to="/">
-              <span className={styles.text}>Orders</span>
-              <span className={styles.box}>
-                <CaretRightIcon className={styles.icon} />
-              </span>
-            </Link>
-          </li>
-          <li className={styles.item}>
-            <Link className={styles.link} to="/">
-              <span className={styles.text}>Offers</span>
-              <span className={styles.box}>
-                <CaretRightIcon className={styles.icon} />
-              </span>
-            </Link>
-          </li>
-        </ul>
-      </section>
-    </article>
+    <div className={styles.overlay}>
+      <article className={styles.wrapper}>
+        <section>
+          <ul className={styles.list}>
+            <li className={styles.item}>
+              <Link className={styles.link} to="/">
+                <span className={styles.text}>My Account</span>
+                <span className={styles.box}>
+                  <CaretRightIcon className={styles.icon} />
+                </span>
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link className={styles.link} to="/">
+                <span className={styles.text}>Wallet</span>
+                <span className={styles.box}>
+                  <CaretRightIcon className={styles.icon} />
+                </span>
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link className={styles.link} to="/">
+                <span className={styles.text}>Orders</span>
+                <span className={styles.box}>
+                  <CaretRightIcon className={styles.icon} />
+                </span>
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link className={styles.link} to="/">
+                <span className={styles.text}>Offers</span>
+                <span className={styles.box}>
+                  <CaretRightIcon className={styles.icon} />
+                </span>
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </div>
   )
 }
 
