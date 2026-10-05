@@ -6,13 +6,13 @@ function Navigation() {
   return (
     <nav className={styles.wrapper}>
       <ul className={styles.navigation}>
-        <NavigationItem>
+        <NavigationItem route="/wishlist">
           <HeartIcon className={styles.icon} />
         </NavigationItem>
-        <NavigationItem>
+        <NavigationItem route="/cart">
           <BackpackIcon className={styles.icon} />
         </NavigationItem>
-        <NavigationItem>
+        <NavigationItem route="/account">
           <PersonIcon className={styles.icon} />
         </NavigationItem>
       </ul>

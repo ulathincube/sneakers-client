@@ -18,6 +18,20 @@
   gap: var(--spacing-20);
 }
 
+.list {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.tag {
+  font-weight: var(--font-weight-light-bold);
+}
+
+.description {
+  justify-self: end;
+  text-align: right;
+}
+
 .actions {
   display: flex;
   flex-direction: column;
@@ -27,4 +41,10 @@
 .checkout,
 .paypal {
   padding: var(--spacing-10);
+  border: none;
+}
+
+.checkout {
+  background-color: var(--black);
+  color: var(--white);
 }

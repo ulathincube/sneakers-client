@@ -10,14 +10,24 @@ function CartDetails() {
       <aside className={styles.sidebar}>
         <h3 className={styles.title}>Summary</h3>
         <div className={styles.taxes}>
-          <p className={styles.promo}>Do you have a promo code? </p>
-          <p className={styles.subtotal}>Subtotal $55</p>
-          <p className={styles.shipping}>Estimated Shipping $0.00</p>
-          <p className={styles.tax}>Estimated Tax $0.00</p>
+          <dl className={styles.list}>
+            <dt className={styles.tag}>Do you have a promo code?</dt>
+            <dd className={styles.description}>#Promo</dd>
+
+            <dt className={styles.tag}>Subtotal</dt>
+            <dd className={styles.description}>$55</dd>
+
+            <dt className={styles.tag}>Estimated Shipping</dt>
+            <dd className={styles.description}>$0.00</dd>
+
+            <dt className={styles.tag}>Estimated Tax</dt>
+            <dd className={styles.description}>$0.00</dd>
+
+            <dt className={styles.tag}>Total</dt>
+            <dd className={styles.description}>$55</dd>
+          </dl>
         </div>
-        <div className={styles.result}>
-          <p className={styles.total}>Total $55</p>
-        </div>
+
         <div className={styles.actions}>
           <button className={styles.checkout}>Checkout</button>
           <button className={styles.paypal}>Paypal</button>
