@@ -35,3 +35,11 @@
   height: 24px;
   color: var(--dark-gray);
 }
+
+@media screen and (max-width: 50rem) {
+  .wrapper {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

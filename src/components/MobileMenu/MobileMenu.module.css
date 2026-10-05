@@ -1,0 +1,27 @@
+.wrapper {
+  display: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 62.5rem) {
+  .wrapper {
+    display: flex;
+    visibility: visible;
+    pointer-events: all;
+    flex: 1;
+  }
+}
