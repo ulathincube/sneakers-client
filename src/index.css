@@ -25,6 +25,7 @@
   --grid-auto-row: 500px;
   --link-color: hsl(300deg 100% 50%);
   --gray: hsl(0deg 0% 75%);
+  --overlay: hsl(0deg 0% 20% / 0.5);
   --white: hsl(0deg 0% 95%);
   --black: hsl(0deg 0% 10%);
   --highlight: hsl(0deg 100% 50%);
@@ -43,6 +44,7 @@ body {
   font-size: var(--font-size-default);
   font-weight: var(--font-weight-default);
   position: relative;
+  isolation: isolate;
 }
 
 #root,
@@ -66,4 +68,9 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
+  isolation: isolate;
+  z-index: 2;
+  flex-direction: column;
 }
+
+/* root => modal */

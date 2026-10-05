@@ -22,6 +22,5 @@
     display: flex;
     visibility: visible;
     pointer-events: all;
-    flex: 1;
   }
 }

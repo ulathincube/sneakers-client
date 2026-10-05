@@ -1,0 +1,16 @@
+.wrapper {
+  padding: var(--spacing-30);
+  animation: slide-in 1000ms ease-out both;
+  background-color: var(--overlay);
+  backdrop-filter: blur(5px);
+  flex: 1;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
