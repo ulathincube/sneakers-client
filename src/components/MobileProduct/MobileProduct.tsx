@@ -20,12 +20,14 @@ function MobileProduct({ url, product, price }: Props) {
       </article>
       <article className={styles.sizing}>
         <h3 className={styles.heading}>Size</h3>
-        <select>
+        <select className={styles.select}>
           <option value="">Please select a size</option>
         </select>
-        <Link to="/">Size Guide</Link>
+        <Link className={styles.link} to="/">
+          Size Guide
+        </Link>
       </article>
-      <button>Add to Bag</button>
+      <button className={styles.bag}>Add to Bag</button>
     </main>
   )
 }
