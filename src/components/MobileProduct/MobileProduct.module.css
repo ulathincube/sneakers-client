@@ -21,3 +21,9 @@
 .sizing {
   display: flex;
 }
+
+.bag {
+  padding: var(--spacing-10);
+  color: var(--white);
+  background-color: var(--black);
+}

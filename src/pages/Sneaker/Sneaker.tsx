@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query"
 import { getSneaker } from "../../services/sneaker"
 import { StarFilledIcon, BackpackIcon, HeartIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
+import MobileProduct from "../../components/MobileProduct"
 
 function Sneaker() {
   const { sneakerId } = useParams()
@@ -132,6 +133,7 @@ function Sneaker() {
           </section>
         </aside>
       </main>
+      <main className={styles.mobile}></main>
       <Footer />
     </>
   )
