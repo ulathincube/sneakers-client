@@ -1,7 +1,7 @@
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 
-function Womens() {
+function Sale() {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ function Womens() {
   )
 }
 
-export default Womens
+export default Sale

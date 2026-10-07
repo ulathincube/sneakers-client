@@ -7,6 +7,9 @@ import Sneaker from "./pages/Sneaker"
 import Cart from "./pages/Cart"
 import Wishlist from "./pages/Wishlist"
 import Account from "./pages/Account"
+import Womens from "./pages/Womens"
+import Mens from "./pages/Mens"
+import Sale from "./pages/Sale"
 
 function App() {
   return (
@@ -20,7 +23,10 @@ function App() {
         </Route>
         <Route path="cart" element={<Cart />} />
         <Route path="wishlist" element={<Wishlist />} />
+        <Route path="mens" element={<Mens />} />
+        <Route path="womens" element={<Womens />} />
         <Route path="account" element={<Account />} />
+        <Route path="sale" element={<Sale />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
