@@ -18,6 +18,9 @@ function MobileProduct({ images, product, price }: Props) {
 
   return (
     <main className={styles.wrapper}>
+      <div className={styles.banner}>
+        <h1 className={styles.heading}>Expected to ship tomorrow</h1>
+      </div>
       <figure className={styles.box}>
         <img src={imageUrl} alt={product} className={styles.image} />
       </figure>

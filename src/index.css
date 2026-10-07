@@ -6,6 +6,7 @@
   --font-weight-default: 400;
   --font-weight-light: 300;
 
+  --link-color: hsl(240deg 100% 40%);
   --icon-size: 24px;
   --font-weight-super-light: 200;
   --font-weight-light-bold: 600;
@@ -24,7 +25,7 @@
   --grid-image: 250px;
   --grid-image-small: 150px;
   --grid-auto-row: 500px;
-  --link-color: hsl(300deg 100% 50%);
+  /* --link-color: hsl(300deg 100% 50%); */
   --gray: hsl(0deg 0% 75%);
   --overlay: hsl(0deg 0% 20% / 0.5);
   --white: hsl(0deg 0% 95%);

@@ -45,7 +45,7 @@
 }
 
 .text {
-  flex-basis: 200px;
+  flex: 2;
 }
 
 .box {
@@ -65,5 +65,11 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .wrapper {
+    padding: var(--spacing-30);
   }
 }
