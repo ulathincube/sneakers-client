@@ -7,7 +7,9 @@ function Banner() {
       <section className={styles.actions}>
         <div className={styles.details}>
           <h2 className={styles.title}>Nike x Adidas</h2>
-          <p>Get the freshest pairs of sneakers in town!</p>
+          <p className={styles.description}>
+            Get the freshest pairs of sneakers in town!
+          </p>
         </div>
         <div className={styles.container}>
           <Link to="/" className={styles.link}>

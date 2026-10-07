@@ -26,3 +26,15 @@
   text-decoration: none;
   color: var(--highlight);
 }
+
+@media screen and (max-width: 43.75rem) {
+  .wrapper {
+    padding: var(--spacing-20);
+  }
+
+  .categories {
+    justify-content: space-between;
+    flex: 1;
+    gap: 0;
+  }
+}
