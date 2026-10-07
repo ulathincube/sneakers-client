@@ -6,3 +6,9 @@
   padding: var(--spacing-20) var(--spacing-60);
   background-color: var(--white);
 }
+
+@media screen and (max-width: 43.75rem) {
+  .wrapper {
+    padding: var(--spacing-20);
+  }
+}
