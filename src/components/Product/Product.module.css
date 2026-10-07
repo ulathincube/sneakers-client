@@ -55,3 +55,9 @@
   justify-self: end;
   font-weight: var(--font-weight-light-bold);
 }
+
+@media screen and (max-width: 43.75rem) {
+  .container {
+    width: 100%;
+  }
+}
