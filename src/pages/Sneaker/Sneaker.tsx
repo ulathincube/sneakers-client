@@ -133,7 +133,13 @@ function Sneaker() {
           </section>
         </aside>
       </main>
-      <main className={styles.mobile}></main>
+      <main className={styles.mobile}>
+        <MobileProduct
+          price={data.data.price}
+          product={data.data.name}
+          images={data.data.pictures}
+        />
+      </main>
       <Footer />
     </>
   )

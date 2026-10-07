@@ -1,17 +1,25 @@
 import styles from "./MobileProduct.module.css"
 import { Link } from "react-router"
+import { useState } from "react"
+
+interface Picture {
+  id: string
+  url: string
+}
 
 interface Props {
-  url: string
+  images: Picture[]
   product: string
   price: number
 }
 
-function MobileProduct({ url, product, price }: Props) {
+function MobileProduct({ images, product, price }: Props) {
+  const [imageUrl, setImageUrl] = useState<string>(images[0].url)
+
   return (
     <main className={styles.wrapper}>
       <figure className={styles.box}>
-        <img src={url} alt={product} className={styles.image} />
+        <img src={imageUrl} alt={product} className={styles.image} />
       </figure>
       <article className={styles.details}>
         <h3 className={styles.title}>{product}</h3>
@@ -27,7 +35,9 @@ function MobileProduct({ url, product, price }: Props) {
           Size Guide
         </Link>
       </article>
-      <button className={styles.bag}>Add to Bag</button>
+      <article className={styles.container}>
+        <button className={styles.bag}>Add to Bag</button>
+      </article>
     </main>
   )
 }

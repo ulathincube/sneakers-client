@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  padding: var(--spacing-30) var(--spacing-20);
 }
 
 .box {
@@ -8,6 +9,8 @@
   display: flex;
   flex-basis: 500px;
   overflow: hidden;
+  margin-left: calc(var(--spacing-20) * -1);
+  margin-right: calc(var(--spacing-20) * -1);
 }
 
 .image {
@@ -18,12 +21,39 @@
   object-fit: cover;
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-10) 0;
+}
+
+.title {
+  font-weight: var(--font-weight-light-bold);
+  font-size: 1.2rem;
+}
+
+.description,
+.price {
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-standard);
+  color: var(--gray);
+}
+
 .sizing {
   display: flex;
+  justify-content: space-between;
 }
 
 .bag {
-  padding: var(--spacing-10);
+  flex: 1;
+  padding: var(--spacing-15);
+  border: none;
   color: var(--white);
   background-color: var(--black);
+  text-transform: uppercase;
+}
+
+.container {
+  padding-top: var(--spacing-20);
+  display: flex;
 }
