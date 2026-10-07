@@ -16,11 +16,13 @@ function Product({ id, url, name, category, price }: Props) {
         <article className={styles.container}>
           <img className={styles.image} src={url} alt={name} />
         </article>
-
         <article className={styles.details}>
           <h3 className={styles.title}>{name}</h3>
           <p className={styles.category}>{category}</p>
-          <p className={styles.price}>${price}</p>
+          <p className={styles.colors}>1 color</p>
+          <article className={styles.cost}>
+            <p className={styles.price}>${price}</p>
+          </article>
         </article>
       </Link>
     </li>

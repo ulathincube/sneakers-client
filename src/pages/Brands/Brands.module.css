@@ -4,8 +4,8 @@
 
 .brands {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--grid-image), 1fr));
+  grid-template-columns: repeat(6, 1fr);
   /* grid-auto-rows: 100px; */
-  gap: var(--spacing-40);
+  gap: var(--spacing-20);
   list-style: none;
 }

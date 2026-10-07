@@ -1,16 +1,19 @@
 :root {
-  --font-stack: "Figtree", "Arial", "Helvetica", sans-serif;
-  --font-size-default: 1.5rem;
-  --font-size-medium: 2rem;
-  --font-size-large: 3rem;
+  --font-stack: "Clarity City", "Arial", "Helvetica", sans-serif;
+  --font-size-small: 1.1rem;
+  --font-size-default: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 2.4rem;
+
+  --font-weight-super-light: 200;
+  --font-weight-light: 300;
   --font-weight-default: 400;
-  --font-weight-light: 200;
+  --font-weight-light-bold: 500;
   --font-weight-bold: 800;
 
   --link-color: hsl(240deg 100% 40%);
   --icon-size: 24px;
-  --font-weight-super-light: 200;
-  --font-weight-light-bold: 600;
+
   --spacing-3: 3px;
   --spacing-5: 5px;
   --spacing-10: 10px;

@@ -7,6 +7,7 @@ import { getSneaker } from "../../services/sneaker"
 import { StarFilledIcon, BackpackIcon, HeartIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import MobileProduct from "../../components/MobileProduct"
+import { Link } from "react-router"
 
 function Sneaker() {
   const { sneakerId } = useParams()
@@ -40,6 +41,7 @@ function Sneaker() {
         <aside className={styles.sidebar}>
           <section className={styles.details}>
             <h3 className={styles.title}>{data.data.name}</h3>
+            <p className={styles.category}>{data.data.name}</p>
             <ul className={styles.stars}>
               <li className={styles.star}>
                 <StarFilledIcon className={styles.icon} />
@@ -58,63 +60,80 @@ function Sneaker() {
               </li>
             </ul>
             <p className={styles.price}>${data.data.price}</p>
+            <div className={styles.options}>
+              <h4 className={styles.gender}>Select Gender</h4>
+              <div className={styles.actions}>
+                <button className={styles.mens}>Mens</button>
+                <button className={styles.womens}>Womens</button>
+              </div>
+            </div>
           </section>
-          <div className={styles.sizes}>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-06">
-                6
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-06"
-                value="6"
-                checked={size === "6"}
-                onChange={(event) => setSize(event.target.value)}
-              />
-            </div>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-07">
-                7
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-07"
-                value="7"
-                checked={size === "7"}
-                onChange={(event) => setSize(event.target.value)}
-              />
-            </div>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-08">
-                8
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-08"
-                value="8"
-                checked={size === "8"}
-                onChange={(event) => setSize(event.target.value)}
-              />
-            </div>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-09">
-                9
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-09"
-                value="9"
-                checked={size === "9"}
-                onChange={(event) => setSize(event.target.value)}
-              />
+          <div className={styles.sizing}>
+            <article className={styles.prompts}>
+              <h4 className={styles.heading}>Select Size</h4>
+              <div>
+                <Link className={styles.link} to="/">
+                  Size Guide
+                </Link>
+              </div>
+            </article>
+            <div className={styles.sizes}>
+              <div className={styles.group}>
+                <label className={styles.label} htmlFor="size-06">
+                  6
+                </label>
+                <input
+                  className={styles.field}
+                  type="radio"
+                  name="size"
+                  id="size-06"
+                  value="6"
+                  checked={size === "6"}
+                  onChange={(event) => setSize(event.target.value)}
+                />
+              </div>
+              <div className={styles.group}>
+                <label className={styles.label} htmlFor="size-07">
+                  7
+                </label>
+                <input
+                  className={styles.field}
+                  type="radio"
+                  name="size"
+                  id="size-07"
+                  value="7"
+                  checked={size === "7"}
+                  onChange={(event) => setSize(event.target.value)}
+                />
+              </div>
+              <div className={styles.group}>
+                <label className={styles.label} htmlFor="size-08">
+                  8
+                </label>
+                <input
+                  className={styles.field}
+                  type="radio"
+                  name="size"
+                  id="size-08"
+                  value="8"
+                  checked={size === "8"}
+                  onChange={(event) => setSize(event.target.value)}
+                />
+              </div>
+              <div className={styles.group}>
+                <label className={styles.label} htmlFor="size-09">
+                  9
+                </label>
+                <input
+                  className={styles.field}
+                  type="radio"
+                  name="size"
+                  id="size-09"
+                  value="9"
+                  checked={size === "9"}
+                  onChange={(event) => setSize(event.target.value)}
+                />
+              </div>
             </div>
           </div>
           <section className={styles.actions}>

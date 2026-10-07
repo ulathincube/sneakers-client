@@ -17,9 +17,12 @@
   font-size: var(--font-size-large);
 }
 
-.description,
-.link {
+.description {
   font-size: var(--font-size-medium);
+}
+
+.link {
+  font-size: var(--font-size-default);
 }
 
 .link:link,
@@ -28,7 +31,6 @@
   color: inherit;
   background-color: var(--black);
   padding: var(--spacing-10) var(--spacing-30);
-  border-radius: var(--radius-5);
 }
 
 @media screen and (max-width: 43.75rem) {

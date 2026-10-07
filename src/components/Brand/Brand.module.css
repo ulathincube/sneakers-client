@@ -14,13 +14,18 @@
   color: inherit;
   font-weight: var(--font-weight-light-bold);
   align-items: center;
+  gap: var(--spacing-10);
 }
 
 .logo {
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius-5);
   object-fit: cover;
   width: 100%;
   display: block;
   height: 100%;
+}
+
+.name {
+  font-weight: var(--font-weight-light-bold);
+  font-size: var(--font-size-default);
 }

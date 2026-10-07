@@ -20,7 +20,7 @@
 
 .item {
   aspect-ratio: 1 / 1;
-  border-radius: var(--radius-15);
+
   overflow: hidden;
 }
 
@@ -43,6 +43,11 @@
   font-weight: var(--font-weight-light-bold);
 }
 
+.category {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-default);
+}
+
 .stars {
   list-style: none;
   display: flex;
@@ -63,18 +68,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 60px);
   grid-auto-rows: 45px;
-  gap: var(--spacing-15);
+  gap: var(--spacing-10);
 }
 
 .size {
   width: 100%;
   height: 100%;
-  border: none;
+  border: 1px solid var(--gray);
   padding: var(--spacing-10);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-5);
 }
 
 .active {
@@ -83,11 +87,10 @@
 }
 
 .group {
-  background-color: var(--gray);
+  border: 1px solid var(--gray);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-5);
 }
 
 .group:has(.field:checked) {
@@ -111,19 +114,19 @@
 
 .actions {
   display: flex;
-
+  padding: var(--spacing-20) 0;
   gap: var(--spacing-20);
 }
 
 .add,
 .favourite {
-  border-radius: var(--radius-5);
   padding: var(--spacing-10) var(--spacing-20);
   border: none;
   display: flex;
   gap: var(--spacing-10);
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .icon {
@@ -135,6 +138,27 @@
   display: none;
   visibility: hidden;
   pointer-events: none;
+}
+
+.sizes {
+  padding: var(--spacing-20) 0;
+}
+
+.options {
+  padding: var(--spacing-20) 0;
+}
+
+.prompts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mens,
+.womens {
+  flex: 1;
+  border: 1px solid var(--gray);
+  background-color: transparent;
+  padding: var(--spacing-10);
 }
 
 @media screen and (max-width: 62.5rem) {
