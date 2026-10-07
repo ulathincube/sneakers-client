@@ -31,8 +31,8 @@
 .container {
   /* border-radius: var(--radius-5); */
   overflow: hidden;
-  width: var(--grid-image);
-  height: var(--grid-image);
+  /* width: var(--grid-image);
+  height: var(--grid-image); */
   border-radius: var(--radius-10);
 }
 
