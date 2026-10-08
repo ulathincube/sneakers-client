@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: 300px;
+  /* min-height: 300px; */
   background-color: var(--gray);
   /* margin-top: var(--spacing-60); */
   padding: var(--spacing-60);
