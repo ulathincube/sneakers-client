@@ -161,6 +161,29 @@
   padding: var(--spacing-10);
 }
 
+.grouping {
+  border: 1px solid var(--gray);
+  padding: var(--spacing-10) var(--spacing-30);
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  color: var(--black);
+}
+
+.grouping:has(.radio:checked) {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.radio {
+  visibility: hidden;
+  display: none;
+}
+
 @media screen and (max-width: 62.5rem) {
   .wrapper {
     display: none;

@@ -12,6 +12,7 @@ import { Link } from "react-router"
 function Sneaker() {
   const { sneakerId } = useParams()
   const [size, setSize] = useState<string>()
+  const [gender, setGender] = useState<string>()
 
   const { isPending, isError, error, data } = useQuery({
     queryKey: ["getSneaker", sneakerId],
@@ -63,8 +64,32 @@ function Sneaker() {
             <div className={styles.options}>
               <h4 className={styles.gender}>Select Gender</h4>
               <div className={styles.actions}>
-                <button className={styles.mens}>Mens</button>
-                <button className={styles.womens}>Womens</button>
+                <div className={styles.grouping}>
+                  <label htmlFor="mens">Mens</label>
+                  <input
+                    className={styles.radio}
+                    type="radio"
+                    value="mens"
+                    id="mens"
+                    checked={gender === "mens"}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                      setGender(event.target.value)
+                    }}
+                  />
+                </div>
+                <div className={styles.grouping}>
+                  <label htmlFor="womens">Womens</label>
+                  <input
+                    className={styles.radio}
+                    type="radio"
+                    value="womens"
+                    id="womens"
+                    checked={gender === "womens"}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                      setGender(event.target.value)
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </section>
