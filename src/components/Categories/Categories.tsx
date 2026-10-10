@@ -6,12 +6,12 @@ function Categories() {
     <article className={styles.wrapper}>
       <ul className={styles.categories}>
         <li className={styles.category}>
-          <Link to="/" className={styles.link}>
+          <Link to="/mens" className={styles.link}>
             Men
           </Link>
         </li>
         <li className={styles.category}>
-          <Link to="/" className={styles.link}>
+          <Link to="/womens" className={styles.link}>
             Women
           </Link>
         </li>
