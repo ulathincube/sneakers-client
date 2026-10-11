@@ -11,6 +11,7 @@ function Navigation() {
         </NavigationItem>
         <NavigationItem route="/cart">
           <BackpackIcon className={styles.icon} />
+          <span className={styles.count}></span>
         </NavigationItem>
         <NavigationItem route="/account">
           <PersonIcon className={styles.icon} />

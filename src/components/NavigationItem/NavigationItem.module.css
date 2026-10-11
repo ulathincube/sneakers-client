@@ -8,4 +8,5 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
+  gap: var(--spacing-5);
 }
