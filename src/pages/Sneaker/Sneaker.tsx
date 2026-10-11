@@ -19,6 +19,8 @@ function Sneaker() {
     queryFn: () => getSneaker(sneakerId!),
   })
 
+  // update cart-state =>
+
   if (isPending) return <div>...Loading...</div>
   if (isError) return <div>{error.message}</div>
 
