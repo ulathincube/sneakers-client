@@ -31,9 +31,20 @@ interface Sneaker {
 function App() {
   const [cart, setCart] = useState<Sneaker[]>([])
 
-  const onUpdateCart = useCallback((cartItem: Sneaker) => {
-    setCart((previousCart) => [...previousCart, cartItem])
-  }, [])
+  const onUpdateCart = useCallback(
+    (cartItem: Sneaker) => {
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id === cartItem.id) {
+          const cartClone = [...cart]
+          cartClone[i].quantity += 1
+          setCart(cartClone)
+          return
+        }
+      }
+      setCart((previousCart) => [...previousCart, cartItem])
+    },
+    [cart]
+  )
 
   return (
     <CartContext value={{ cart, onUpdateCart }}>

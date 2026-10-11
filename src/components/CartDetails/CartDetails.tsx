@@ -1,11 +1,22 @@
 import styles from "./CartDetails.module.css"
 import CartItem from "../CartItem"
+import useCart from "../../hooks/useCart"
 
 function CartDetails() {
+  const { cart } = useCart()
+
   return (
     <main className={styles.wrapper}>
       <section className={styles.cart}>
-        <CartItem url="https://picsum.photos/seed/mevSGUs1/500/500" />
+        {cart.length > 0 &&
+          cart.map((cartItemObject) => (
+            <CartItem
+              key={cartItemObject.id}
+              name={cartItemObject.name}
+              url={cartItemObject.pictures[0].url}
+              price={cartItemObject.price}
+            />
+          ))}
       </section>
       <aside className={styles.sidebar}>
         <h3 className={styles.title}>Summary</h3>
