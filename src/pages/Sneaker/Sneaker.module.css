@@ -170,10 +170,6 @@
   align-items: center;
 }
 
-.label {
-  color: var(--black);
-}
-
 .grouping:has(.radio:checked) {
   background-color: var(--black);
   color: var(--white);
