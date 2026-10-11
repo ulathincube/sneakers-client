@@ -50,7 +50,6 @@ function Sneaker() {
       inStock: true,
     }
 
-    console.log({ cartItem, cart })
     onUpdateCart(cartItem)
   }
 

@@ -11,6 +11,7 @@ function CartDetails() {
         {cart.length > 0 &&
           cart.map((cartItemObject) => (
             <CartItem
+              id={cartItemObject.id}
               key={cartItemObject.id}
               name={cartItemObject.name}
               url={cartItemObject.pictures[0].url}
