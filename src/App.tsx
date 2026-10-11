@@ -32,7 +32,7 @@ function App() {
   const [cart, setCart] = useState<Sneaker[]>([])
 
   const onUpdateCart = useCallback((cartItem: Sneaker) => {
-    setCart((previousCart) => ({ ...previousCart, cartItem }))
+    setCart((previousCart) => [...previousCart, cartItem])
   }, [])
 
   return (

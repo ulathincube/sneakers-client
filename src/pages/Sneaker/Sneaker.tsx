@@ -8,21 +8,51 @@ import { StarFilledIcon, BackpackIcon, HeartIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import MobileProduct from "../../components/MobileProduct"
 import { Link } from "react-router"
+import useCart from "../../hooks/useCart"
+
+interface Picture {
+  id: string
+  url: string
+}
+
+interface Item {
+  id: string
+  name: string
+  size: number
+  quantity: number
+  price: number
+  inStock: boolean
+  pictures: Picture[]
+}
 
 function Sneaker() {
   const { sneakerId } = useParams()
   const [size, setSize] = useState<string>()
   const [gender, setGender] = useState<string>()
+  const { cart, onUpdateCart } = useCart()
 
   const { isPending, isError, error, data } = useQuery({
     queryKey: ["getSneaker", sneakerId],
     queryFn: () => getSneaker(sneakerId!),
   })
 
-  // update cart-state =>
-
   if (isPending) return <div>...Loading...</div>
   if (isError) return <div>{error.message}</div>
+
+  const onAddToCartHandler = () => {
+    const cartItem: Item = {
+      id: data.data.id,
+      name: data.data.name,
+      size: 6,
+      quantity: 1,
+      price: data.data.price,
+      pictures: data.data.pictures,
+      inStock: true,
+    }
+
+    console.log({ cartItem, cart })
+    onUpdateCart(cartItem)
+  }
 
   return (
     <>
@@ -164,7 +194,7 @@ function Sneaker() {
             </div>
           </div>
           <section className={styles.actions}>
-            <button className={styles.add}>
+            <button onClick={onAddToCartHandler} className={styles.add}>
               <span className={styles.text}>Add to Cart</span>
               <span className={styles.box}>
                 <BackpackIcon className={styles.icon} />
