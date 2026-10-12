@@ -85,7 +85,7 @@ function App() {
           return
         }
       }
-      setCart((previousCart) => [...previousCart, wishlistItem])
+      setWishlist((previousCart) => [...previousCart, wishlistItem])
     },
     [wishlist]
   )

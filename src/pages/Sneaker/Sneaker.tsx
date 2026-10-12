@@ -9,6 +9,7 @@ import { useState } from "react"
 import MobileProduct from "../../components/MobileProduct"
 import { Link } from "react-router"
 import useCart from "../../hooks/useCart"
+import useWishlist from "../../hooks/useWishlist"
 
 interface Picture {
   id: string
@@ -30,6 +31,7 @@ function Sneaker() {
   const [size, setSize] = useState<string>()
   const [gender, setGender] = useState<string>()
   const { onAddToCart } = useCart()
+  const { onAddToWishlist } = useWishlist()
 
   const { isPending, isError, error, data } = useQuery({
     queryKey: ["getSneaker", sneakerId],
@@ -51,6 +53,20 @@ function Sneaker() {
     }
 
     onAddToCart(cartItem)
+  }
+
+  const onAddToWishlistHandler = () => {
+    const wishlistItem: Item = {
+      id: data.data.id,
+      name: data.data.name,
+      size: 6,
+      quantity: 1,
+      price: data.data.price,
+      pictures: data.data.pictures,
+      inStock: true,
+    }
+
+    onAddToWishlist(wishlistItem)
   }
 
   return (
@@ -199,7 +215,10 @@ function Sneaker() {
                 <BackpackIcon className={styles.icon} />
               </span>
             </button>
-            <button className={styles.favourite}>
+            <button
+              onClick={onAddToWishlistHandler}
+              className={styles.favourite}
+            >
               <span className={styles.text}>Favourite</span>
               <span className={styles.box}>
                 <HeartIcon className={styles.icon} />
