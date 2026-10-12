@@ -48,9 +48,21 @@ function WishlistItem({ url, name, price, id }: Props) {
 }
 
 function WishlistMenu() {
+  const { wishlist } = useWishlist()
   return (
     <main className={styles.wrapper}>
-      <WishlistItem id="1" url="" name="" price={1} />
+      <section className={styles.wishlist}>
+        {wishlist.length > 0 &&
+          wishlist.map((wishlistObject) => (
+            <WishlistItem
+              id={wishlistObject.id}
+              key={wishlistObject.id}
+              url={wishlistObject.pictures[0].url}
+              name={wishlistObject.name}
+              price={wishlistObject.price}
+            />
+          ))}
+      </section>
     </main>
   )
 }

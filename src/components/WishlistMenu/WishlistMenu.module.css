@@ -1,3 +1,15 @@
 .wrapper {
   flex: 1;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--spacing-60);
+  padding: var(--spacing-60);
+  font-size: 1.1rem;
+}
+
+.wishlist {
+  display: grid;
+  grid-template-columns: var(--grid-image-small) 1fr var(--grid-image-small);
+  gap: var(--spacing-20);
+  grid-auto-rows: var(--grid-image-small);
 }
