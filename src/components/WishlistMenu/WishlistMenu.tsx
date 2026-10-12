@@ -1,5 +1,6 @@
 import styles from "./WishlistMenu.module.css"
 import { TrashIcon } from "@radix-ui/react-icons"
+import useWishlist from "../../hooks/useWishlist"
 
 interface Props {
   id: string
@@ -9,9 +10,11 @@ interface Props {
 }
 
 function WishlistItem({ url, name, price, id }: Props) {
-  const { cart, onRemoveFromCart } = useCart()
+  const { wishlist, onRemoveFromWishlist } = useWishlist()
 
-  const cartItem = cart.find((cartItemObject) => cartItemObject.id === id)
+  const wishlistItem = wishlist.find(
+    (wishlistItemObject) => wishlistItemObject.id === id
+  )
 
   return (
     <>
@@ -24,16 +27,19 @@ function WishlistItem({ url, name, price, id }: Props) {
         <p className={styles.more}>White</p>
         <p className={styles.size}>
           <span className={styles.sizing}>
-            Size {cartItem && cartItem.size}
+            Size {wishlistItem && wishlistItem.size}
           </span>
           <span className={styles.quantity}>
-            Quantity {cartItem && cartItem.quantity}
+            Quantity {wishlistItem && wishlistItem.quantity}
           </span>
         </p>
       </div>
       <div className={styles.price}>
         <p className={styles.number}>${price}</p>
-        <button onClick={() => onRemoveFromCart(id)} className={styles.delete}>
+        <button
+          onClick={() => onRemoveFromWishlist(id)}
+          className={styles.delete}
+        >
           <TrashIcon className={styles.icon} />
         </button>
       </div>
