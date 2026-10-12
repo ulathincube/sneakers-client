@@ -75,8 +75,46 @@ function App() {
     [cart]
   )
 
-  const onAddToWishlist = useCallback(() => {}, [])
-  const onRemoveFromWishlist = useCallback(() => {}, [])
+  const onAddToWishlist = useCallback(
+    (wishlistItem: Sneaker) => {
+      for (let i = 0; i < wishlist.length; i++) {
+        if (wishlist[i].id === wishlistItem.id) {
+          const wishlistClone = [...wishlist]
+          wishlistClone[i].quantity += 1
+          setWishlist(wishlistClone)
+          return
+        }
+      }
+      setCart((previousCart) => [...previousCart, wishlistItem])
+    },
+    [wishlist]
+  )
+  const onRemoveFromWishlist = useCallback(
+    (wishlistItemId: string) => {
+      const wishlistClone = [...wishlist]
+
+      const wishlistItem = wishlist.find(
+        (wishlistItemObject) => wishlistItemObject.id === wishlistItemId
+      )
+
+      if (!wishlistItem) return
+      if (wishlistItem.quantity > 1) {
+        for (let i = 0; i < wishlistClone.length; i++) {
+          if (wishlistClone[i].id === wishlistItemId) {
+            wishlistClone[i].quantity -= 1
+            setWishlist(wishlistClone)
+            return
+          }
+        }
+      }
+
+      const filteredWishlist = wishlistClone.filter(
+        (wishlistItemObject) => wishlistItemObject.id !== wishlistItemId
+      )
+      setWishlist(filteredWishlist)
+    },
+    [wishlist]
+  )
 
   return (
     <CartContext value={{ cart, onAddToCart, onRemoveFromCart }}>
