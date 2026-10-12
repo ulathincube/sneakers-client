@@ -21,3 +21,33 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media screen and (max-width: 100rem) {
+  .products {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 81.25rem) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 62.5rem) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 43.75rem) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
