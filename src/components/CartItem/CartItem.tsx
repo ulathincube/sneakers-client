@@ -1,5 +1,6 @@
 import styles from "./CartItem.module.css"
 import useCart from "../../hooks/useCart"
+import { TrashIcon } from "@radix-ui/react-icons"
 
 interface Props {
   url: string
@@ -9,7 +10,7 @@ interface Props {
 }
 
 function CartItem({ url, name, price, id }: Props) {
-  const { cart } = useCart()
+  const { cart, onRemoveFromCart } = useCart()
 
   const cartItem = cart.find((cartItemObject) => cartItemObject.id === id)
 
@@ -33,6 +34,9 @@ function CartItem({ url, name, price, id }: Props) {
       </div>
       <div className={styles.price}>
         <p className={styles.number}>${price}</p>
+        <button onClick={() => onRemoveFromCart(id)} className={styles.delete}>
+          <TrashIcon className={styles.icon} />
+        </button>
       </div>
     </>
   )

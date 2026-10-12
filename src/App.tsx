@@ -49,11 +49,19 @@ function App() {
   const onRemoveFromCart = useCallback(
     (cartItemId: string) => {
       const cartClone = [...cart]
-      for (let i = 0; i < cartClone.length; i++) {
-        if (cartClone[i].id === cartItemId) {
-          cartClone[i].quantity -= 1
-          setCart(cartClone)
-          return
+
+      const cartItem = cart.find(
+        (cartItemObject) => cartItemObject.id === cartItemId
+      )
+
+      if (!cartItem) return
+      if (cartItem.quantity > 1) {
+        for (let i = 0; i < cartClone.length; i++) {
+          if (cartClone[i].id === cartItemId) {
+            cartClone[i].quantity -= 1
+            setCart(cartClone)
+            return
+          }
         }
       }
 
