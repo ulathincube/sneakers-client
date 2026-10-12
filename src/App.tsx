@@ -31,7 +31,7 @@ interface Sneaker {
 function App() {
   const [cart, setCart] = useState<Sneaker[]>([])
 
-  const onUpdateCart = useCallback(
+  const onAddToCart = useCallback(
     (cartItem: Sneaker) => {
       for (let i = 0; i < cart.length; i++) {
         if (cart[i].id === cartItem.id) {
@@ -46,8 +46,27 @@ function App() {
     [cart]
   )
 
+  const onRemoveFromCart = useCallback(
+    (cartItemId: string) => {
+      const cartClone = [...cart]
+      for (let i = 0; i < cartClone.length; i++) {
+        if (cartClone[i].id === cartItemId) {
+          cartClone[i].quantity -= 1
+          setCart(cartClone)
+          return
+        }
+      }
+
+      const filteredCart = cartClone.filter(
+        (cartItemObject) => cartItemObject.id !== cartItemId
+      )
+      setCart(filteredCart)
+    },
+    [cart]
+  )
+
   return (
-    <CartContext value={{ cart, onUpdateCart }}>
+    <CartContext value={{ cart, onAddToCart, onRemoveFromCart }}>
       <Router>
         <Routes>
           <Route index element={<Home />} />

@@ -29,7 +29,7 @@ function Sneaker() {
   const { sneakerId } = useParams()
   const [size, setSize] = useState<string>()
   const [gender, setGender] = useState<string>()
-  const { cart, onUpdateCart } = useCart()
+  const { onAddToCart } = useCart()
 
   const { isPending, isError, error, data } = useQuery({
     queryKey: ["getSneaker", sneakerId],
@@ -50,7 +50,7 @@ function Sneaker() {
       inStock: true,
     }
 
-    onUpdateCart(cartItem)
+    onAddToCart(cartItem)
   }
 
   return (

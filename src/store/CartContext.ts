@@ -17,10 +17,12 @@ interface Sneaker {
 
 const CartContext = createContext<{
   cart: Sneaker[]
-  onUpdateCart: (cartItem: Sneaker) => void
+  onAddToCart: (cartItem: Sneaker) => void
+  onRemoveFromCart: (cartItemId: string) => void
 }>({
   cart: [],
-  onUpdateCart: () => {},
+  onAddToCart: () => {},
+  onRemoveFromCart: () => {},
 })
 
 export default CartContext
