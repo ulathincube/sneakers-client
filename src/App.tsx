@@ -11,6 +11,7 @@ import Womens from "./pages/Womens"
 import Mens from "./pages/Mens"
 import Sale from "./pages/Sale"
 import CartContext from "./store/CartContext"
+import WishlistContext from "./store/WishlistContext"
 import { useState, useCallback } from "react"
 
 interface Picture {
@@ -30,6 +31,7 @@ interface Sneaker {
 
 function App() {
   const [cart, setCart] = useState<Sneaker[]>([])
+  const [wishlist, setWishlist] = useState<Sneaker[]>([])
 
   const onAddToCart = useCallback(
     (cartItem: Sneaker) => {
@@ -73,25 +75,32 @@ function App() {
     [cart]
   )
 
+  const onAddToWishlist = useCallback(() => {}, [])
+  const onRemoveFromWishlist = useCallback(() => {}, [])
+
   return (
     <CartContext value={{ cart, onAddToCart, onRemoveFromCart }}>
-      <Router>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="sneakers/:sneakerId" element={<Sneaker />} />
-          <Route path="brands">
-            <Route index element={<Brands />} />
-            <Route path="/brands/:brandId" element={<Brand />} />
-          </Route>
-          <Route path="cart" element={<Cart />} />
-          <Route path="wishlist" element={<Wishlist />} />
-          <Route path="mens" element={<Mens />} />
-          <Route path="womens" element={<Womens />} />
-          <Route path="account" element={<Account />} />
-          <Route path="sale" element={<Sale />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
+      <WishlistContext
+        value={{ wishlist, onAddToWishlist, onRemoveFromWishlist }}
+      >
+        <Router>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="sneakers/:sneakerId" element={<Sneaker />} />
+            <Route path="brands">
+              <Route index element={<Brands />} />
+              <Route path="/brands/:brandId" element={<Brand />} />
+            </Route>
+            <Route path="cart" element={<Cart />} />
+            <Route path="wishlist" element={<Wishlist />} />
+            <Route path="mens" element={<Mens />} />
+            <Route path="womens" element={<Womens />} />
+            <Route path="account" element={<Account />} />
+            <Route path="sale" element={<Sale />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Router>
+      </WishlistContext>
     </CartContext>
   )
 }
