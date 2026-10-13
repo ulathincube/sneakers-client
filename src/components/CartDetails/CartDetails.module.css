@@ -56,6 +56,30 @@
   color: var(--white);
 }
 
+.check {
+  flex-direction: column;
+  gap: var(--spacing-10);
+  grid-column: 1 / -1;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.continue {
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-20);
+  border: none;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 62.5rem) {
   .sidebar {
     display: none;
@@ -71,5 +95,11 @@
 @media screen and (max-width: 43.75rem) {
   .wrapper {
     padding: var(--spacing-20);
+  }
+
+  .check {
+    display: flex;
+    visibility: visible;
+    pointer-events: all;
   }
 }

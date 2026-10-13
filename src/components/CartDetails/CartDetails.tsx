@@ -13,16 +13,26 @@ function CartDetails() {
   return (
     <main className={styles.wrapper}>
       <section className={styles.cart}>
-        {cart.length > 0 &&
-          cart.map((cartItemObject) => (
-            <CartItem
-              id={cartItemObject.id}
-              key={cartItemObject.id}
-              name={cartItemObject.name}
-              url={cartItemObject.pictures[0].url}
-              price={cartItemObject.price}
-            />
-          ))}
+        {cart.length > 0 && (
+          <>
+            {cart.map((cartItemObject) => (
+              <CartItem
+                id={cartItemObject.id}
+                key={cartItemObject.id}
+                name={cartItemObject.name}
+                url={cartItemObject.pictures[0].url}
+                price={cartItemObject.price}
+              />
+            ))}
+            <article className={styles.check}>
+              <dl className={styles.subtotal}>
+                <dt className={styles.tag}>Subtotal</dt>
+                <dd className={styles.description}>$100</dd>
+              </dl>
+              <button className={styles.continue}>Continue to Checkout</button>
+            </article>
+          </>
+        )}
       </section>
       {cart.length > 0 && (
         <aside className={styles.sidebar}>
