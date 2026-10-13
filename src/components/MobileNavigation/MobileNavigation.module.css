@@ -68,6 +68,12 @@
   }
 }
 
+@media screen and (max-width: 43.75rem) {
+  .list {
+    font-size: var(--font-size-medium-mobile);
+  }
+}
+
 @media screen and (max-width: 31.25rem) {
   .wrapper {
     padding: var(--spacing-30);
