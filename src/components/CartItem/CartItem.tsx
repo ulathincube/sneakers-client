@@ -22,6 +22,7 @@ function CartItem({ url, name, price, id }: Props) {
       <div className={styles.name}>
         <h2 className={styles.title}>{name}</h2>
         <p className={styles.description}>Men's Shoes</p>
+        <p className={styles.show}>{cartItem && cartItem.size} / White</p>
         <p className={styles.more}>White</p>
         <p className={styles.size}>
           <span className={styles.sizing}>

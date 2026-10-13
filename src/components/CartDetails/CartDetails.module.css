@@ -55,3 +55,15 @@
   background-color: var(--black);
   color: var(--white);
 }
+
+@media screen and (max-width: 62.5rem) {
+  .sidebar {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .cart {
+    grid-column: 1 / -1;
+  }
+}

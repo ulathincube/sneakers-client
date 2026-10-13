@@ -55,3 +55,31 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+.show {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  color: var(--dark-gray);
+}
+
+@media screen and (max-width: 62.5rem) {
+  .title {
+    font-size: var(--font-size-medium-mobile);
+  }
+}
+
+@media screen and (max-width: 43.75rem) {
+  .description,
+  .more,
+  .size {
+    display: none;
+    visibility: hidden;
+  }
+
+  .show {
+    display: block;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
