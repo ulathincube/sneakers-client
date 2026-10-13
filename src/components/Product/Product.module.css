@@ -67,4 +67,21 @@
   .container {
     width: 100%;
   }
+
+  .title,
+  .price {
+    font-size: var(--font-size-default-mobile);
+    font-weight: var(--font-weight-default);
+  }
+
+  .cost {
+    padding: 0;
+  }
+
+  .category,
+  .colors {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
