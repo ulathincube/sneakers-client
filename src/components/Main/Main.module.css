@@ -3,6 +3,15 @@
   padding: var(--spacing-40) var(--spacing-60);
 }
 
+.container {
+  padding-bottom: var(--spacing-20);
+}
+
+.title {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-default);
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat(6, 1fr);

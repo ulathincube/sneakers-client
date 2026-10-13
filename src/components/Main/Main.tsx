@@ -3,7 +3,11 @@ import Product from "../Product"
 import { useQuery } from "@tanstack/react-query"
 import { getAllSneakers } from "../../services/sneaker"
 
-function Main() {
+interface Props {
+  title: string
+}
+
+function Main({ title }: Props) {
   const { isPending, isError, error, data } = useQuery({
     queryKey: ["allSneakers"],
     queryFn: getAllSneakers,
@@ -15,6 +19,9 @@ function Main() {
 
   return (
     <main className={styles.wrapper}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>{title}</h1>
+      </div>
       <ul className={styles.products}>
         {data.data.map((sneakerObject) => (
           <Product

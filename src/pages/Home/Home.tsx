@@ -11,7 +11,7 @@ function Home() {
       <Header />
       <Categories />
       <Banner />
-      <Main />
+      <Main title="Latest Sneakers" />
       <Footer />
     </>
   )
