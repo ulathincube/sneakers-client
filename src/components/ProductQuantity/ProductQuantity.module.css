@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  gap: 0;
+}
+
+.field {
+  border: none;
+}
+
+.subtract {
+  border-radius: var(--radius-left);
+}
+
+.add {
+  border-radius: var(--radius-right);
+}
+
+.subtract,
+.add {
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

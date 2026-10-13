@@ -30,6 +30,8 @@
   --radius-5: 5px;
   --radius-10: 10px;
   --radius-15: 15px;
+  --radius-left: 5px 0 0 5px;
+  --radius-right: 0 5px 5px 0;
   --grid-image: 250px;
   --grid-image-small: 150px;
   --grid-auto-row: 500px;
