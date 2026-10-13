@@ -31,6 +31,11 @@
   background-color: var(--gray);
 }
 
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
 .group {
   flex: 1;
 }
@@ -40,6 +45,7 @@
 .add {
   width: 100%;
   padding: var(--spacing-5);
+  height: 100%;
 }
 
 .field {
@@ -47,6 +53,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-weight: var(--font-weight-light-bold);
 }
 
 @media screen and (max-width: 43.75rem) {
