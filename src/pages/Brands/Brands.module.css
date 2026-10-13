@@ -1,5 +1,5 @@
 .wrapper {
-  padding: var(--spacing-40);
+  padding: var(--spacing-60);
 }
 
 .brands {
@@ -8,4 +8,38 @@
   /* grid-auto-rows: 100px; */
   gap: var(--spacing-20);
   list-style: none;
+}
+
+@media screen and (max-width: 87.5rem) {
+  .brands {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .brands {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 62.5rem) {
+  .brands {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 43.75rem) {
+  .wrapper {
+    padding: var(--spacing-40) var(--spacing-20);
+  }
+
+  .brands {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .brands {
+    grid-template-columns: 1fr;
+  }
 }
