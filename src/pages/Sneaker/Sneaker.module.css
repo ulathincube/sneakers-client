@@ -130,8 +130,8 @@
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 .mobile {
@@ -201,6 +201,11 @@
   .wrapper {
     flex-direction: column;
     gap: var(--spacing-20);
+    --icon-size: 16px;
+  }
+
+  .sidebar {
+    padding: 0;
   }
 
   .details {
@@ -214,12 +219,17 @@
   .category,
   .price {
     font-size: var(--font-size-medium-mobile);
+    font-weight: var(--font-weight-default);
   }
 }
 
 @media screen and (max-width: 43.75rem) {
   .wrapper {
     padding: var(--spacing-20);
+  }
+
+  .title {
+    font-size: var(--font-size-medium);
   }
 }
 
