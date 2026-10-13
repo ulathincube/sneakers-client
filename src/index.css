@@ -1,9 +1,13 @@
 :root {
   --font-stack: "Clarity City", "Arial", "Helvetica", sans-serif;
   --font-size-small: 1.1rem;
+  --font-size-small-mobile: 0.9rem;
   --font-size-default: 1.2rem;
+  --font-size-default-mobile: 1.1rem;
   --font-size-medium: 1.6rem;
+  --font-size-medium-mobile: 1.3rem;
   --font-size-large: 2.4rem;
+  --font-size-large-mobile: 2rem;
 
   --font-weight-super-light: 200;
   --font-weight-light: 300;
@@ -80,3 +84,9 @@ h6 {
 }
 
 /* root => modal */
+
+@media screen and (max-width: 75rem) {
+  body {
+    font-size: var(--font-size-default-mobile);
+  }
+}
