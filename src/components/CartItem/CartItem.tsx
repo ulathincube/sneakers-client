@@ -1,6 +1,7 @@
 import styles from "./CartItem.module.css"
 import useCart from "../../hooks/useCart"
 import { TrashIcon } from "@radix-ui/react-icons"
+import ProductQuantity from "../ProductQuantity"
 
 interface Props {
   url: string
@@ -32,6 +33,9 @@ function CartItem({ url, name, price, id }: Props) {
             Quantity {cartItem && cartItem.quantity}
           </span>
         </p>
+        <div className={styles.container}>
+          <ProductQuantity />
+        </div>
       </div>
       <div className={styles.price}>
         <p className={styles.number}>${price}</p>

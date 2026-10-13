@@ -1,10 +1,16 @@
 .wrapper {
   display: flex;
   gap: 0;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  flex: 1;
+  max-width: 75%;
 }
 
 .field {
   border: none;
+  background-color: var(--gray);
 }
 
 .subtract {
@@ -21,4 +27,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  background-color: var(--gray);
+}
+
+.group {
+  flex: 1;
+}
+
+.field,
+.subtract,
+.add {
+  width: 100%;
+  padding: var(--spacing-5);
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 43.75rem) {
+  .wrapper {
+    display: flex;
+    visibility: visible;
+    pointer-events: all;
+  }
 }
