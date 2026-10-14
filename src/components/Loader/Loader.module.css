@@ -1,0 +1,24 @@
+.wrapper {
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  animation: spin 500ms ease-in-out infinite both;
+  color: var(--theme-color);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
