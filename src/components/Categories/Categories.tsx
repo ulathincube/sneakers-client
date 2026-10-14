@@ -1,9 +1,14 @@
 import styles from "./Categories.module.css"
 import { Link } from "react-router"
+import { motion } from "motion/react"
 
 function Categories() {
   return (
-    <article className={styles.wrapper}>
+    <motion.article
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={styles.wrapper}
+    >
       <ul className={styles.categories}>
         <li className={styles.category}>
           <Link to="/mens" className={styles.link}>
@@ -26,7 +31,7 @@ function Categories() {
           </Link>
         </li>
       </ul>
-    </article>
+    </motion.article>
   )
 }
 

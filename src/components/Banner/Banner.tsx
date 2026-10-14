@@ -1,9 +1,14 @@
 import styles from "./Banner.module.css"
 import { Link } from "react-router"
+import { motion } from "motion/react"
 
 function Banner() {
   return (
-    <article className={styles.wrapper}>
+    <motion.article
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={styles.wrapper}
+    >
       <section className={styles.actions}>
         <div className={styles.details}>
           <h2 className={styles.title}>Nike x Adidas</h2>
@@ -17,7 +22,7 @@ function Banner() {
           </Link>
         </div>
       </section>
-    </article>
+    </motion.article>
   )
 }
 
