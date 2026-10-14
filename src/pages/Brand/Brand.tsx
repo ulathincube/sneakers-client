@@ -5,6 +5,7 @@ import Product from "../../components/Product"
 import { getBrandProducts } from "../../services/brand"
 import { useQuery } from "@tanstack/react-query"
 import { useParams } from "react-router"
+import Loader from "../../components/Loader"
 
 function Brand() {
   const { brandId } = useParams()
@@ -14,7 +15,7 @@ function Brand() {
     queryFn: () => getBrandProducts(brandId!),
   })
 
-  if (isPending) return <div>...Loading...</div>
+  if (isPending) return <Loader />
   if (isError) return <div>{error.message}</div>
 
   console.log({ data, brandId })

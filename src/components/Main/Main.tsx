@@ -3,6 +3,7 @@ import Product from "../Product"
 import { useQuery } from "@tanstack/react-query"
 import { getAllSneakers } from "../../services/sneaker"
 import { motion } from "motion/react"
+import Loader from "../Loader"
 
 interface Props {
   title: string
@@ -15,7 +16,7 @@ function Main({ title }: Props) {
     retry: 2,
   })
 
-  if (isPending) return <div>...Loading...</div>
+  if (isPending) return <Loader />
   if (isError) return <div>{error.message}</div>
 
   return (

@@ -5,6 +5,7 @@ import Footer from "../../components/Footer"
 import styles from "./Brands.module.css"
 import { useQuery } from "@tanstack/react-query"
 import { getAllBrands } from "../../services/brand"
+import Loader from "../../components/Loader"
 
 function Brands() {
   const { isPending, isError, data, error } = useQuery({
@@ -12,7 +13,7 @@ function Brands() {
     queryFn: getAllBrands,
   })
 
-  if (isPending) return <div>...Loading...</div>
+  if (isPending) return <Loader />
 
   if (isError) return <div>{error.message}</div>
 

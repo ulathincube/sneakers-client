@@ -4,13 +4,12 @@ import Footer from "../../components/Footer"
 import { useParams } from "react-router"
 import { useQuery } from "@tanstack/react-query"
 import { getSneaker } from "../../services/sneaker"
-import { StarFilledIcon, BackpackIcon, HeartIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import MobileProduct from "../../components/MobileProduct"
 import DesktopProduct from "../../components/DesktopProduct"
-import { Link } from "react-router"
 import useCart from "../../hooks/useCart"
 import useWishlist from "../../hooks/useWishlist"
+import Loader from "../../components/Loader"
 
 interface Picture {
   id: string
@@ -39,7 +38,7 @@ function Sneaker() {
     queryFn: () => getSneaker(sneakerId!),
   })
 
-  if (isPending) return <div>...Loading...</div>
+  if (isPending) return <Loader />
   if (isError) return <div>{error.message}</div>
 
   const onAddToCartHandler = () => {
