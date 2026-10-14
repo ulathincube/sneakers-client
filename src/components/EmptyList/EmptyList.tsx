@@ -9,7 +9,9 @@ function EmptyList({ list }: Props) {
   return (
     <main className={styles.wrapper}>
       <h2 className={styles.title}>Your {list} is currently empty</h2>
-      <Link to="/">Start Shopping</Link>
+      <Link className={styles.link} to="/">
+        Start Shopping
+      </Link>
     </main>
   )
 }

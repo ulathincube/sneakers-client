@@ -6,8 +6,23 @@
   align-items: center;
 }
 
+.title {
+  font-size: var(--font-size-medium);
+  text-align: center;
+}
+
+.link {
+  font-weight: var(--font-weight-light-bold);
+}
+
 .link:link,
 .link:visited {
   text-decoration: underline;
   color: var(--link-color);
+}
+
+@media screen and (max-width: 43.75rem) {
+  .title {
+    font-size: var(--font-size-medium-mobile);
+  }
 }
