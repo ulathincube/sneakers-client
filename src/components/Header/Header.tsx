@@ -3,15 +3,22 @@ import Logo from "../Logo"
 import SearchBar from "../SearchBar"
 import Navigation from "../Navigation"
 import MobileMenu from "../MobileMenu"
+import { motion } from "motion/react"
 
 function Header() {
   return (
-    <header className={styles.wrapper}>
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+      }}
+      className={styles.wrapper}
+    >
       <Logo />
       <SearchBar />
       <Navigation />
       <MobileMenu />
-    </header>
+    </motion.header>
   )
 }
 
