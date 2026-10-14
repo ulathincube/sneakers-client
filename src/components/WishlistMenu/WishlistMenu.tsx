@@ -29,9 +29,6 @@ function WishlistItem({ url, name, price, id }: Props) {
           <span className={styles.sizing}>
             Size {wishlistItem && wishlistItem.size}
           </span>
-          <span className={styles.quantity}>
-            Quantity {wishlistItem && wishlistItem.quantity}
-          </span>
         </p>
       </div>
       <div className={styles.price}>
