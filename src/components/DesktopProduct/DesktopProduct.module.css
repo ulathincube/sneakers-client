@@ -187,7 +187,6 @@
   }
 
   .actions {
-    flex-direction: column;
     gap: var(--spacing-10);
   }
 
