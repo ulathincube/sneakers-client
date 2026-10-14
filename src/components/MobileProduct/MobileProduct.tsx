@@ -1,6 +1,7 @@
 import styles from "./MobileProduct.module.css"
 import { Link } from "react-router"
 import { useState } from "react"
+import { motion } from "motion/react"
 
 interface Picture {
   id: string
@@ -17,7 +18,11 @@ function MobileProduct({ images, product, price }: Props) {
   const [imageUrl, setImageUrl] = useState<string>(images[0].url)
 
   return (
-    <main className={styles.wrapper}>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={styles.wrapper}
+    >
       <div className={styles.banner}>
         <h1 className={styles.heading}>Expected to ship tomorrow</h1>
       </div>
@@ -41,7 +46,7 @@ function MobileProduct({ images, product, price }: Props) {
       <article className={styles.container}>
         <button className={styles.bag}>Add to Bag</button>
       </article>
-    </main>
+    </motion.main>
   )
 }
 

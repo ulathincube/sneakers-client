@@ -1,6 +1,7 @@
 import styles from "./DesktopProduct.module.css"
 import { HeartIcon, StarFilledIcon, BackpackIcon } from "@radix-ui/react-icons"
 import { Link } from "react-router"
+import { motion } from "motion/react"
 
 interface Picture {
   id: string
@@ -31,7 +32,11 @@ function DesktopProduct({
   onAddToWishlist,
 }: Props) {
   return (
-    <main className={styles.wrapper}>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={styles.wrapper}
+    >
       <article className={styles.container}>
         <ul className={styles.images}>
           {pictures.map((pictureObject) => (
@@ -182,7 +187,7 @@ function DesktopProduct({
           </button>
         </section>
       </aside>
-    </main>
+    </motion.main>
   )
 }
 
