@@ -1,8 +1,11 @@
 .wrapper {
-  display: flex;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
   flex-direction: column;
   padding: var(--spacing-30) var(--spacing-20);
   padding-top: 0;
+  flex: 1;
 }
 
 .banner {
@@ -84,4 +87,12 @@
 
 .link {
   color: var(--link-color);
+}
+
+@media screen and (max-width: 31.25rem) {
+  .wrapper {
+    display: flex;
+    visibility: visible;
+    pointer-events: all;
+  }
 }

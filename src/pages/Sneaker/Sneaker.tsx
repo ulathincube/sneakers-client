@@ -7,6 +7,7 @@ import { getSneaker } from "../../services/sneaker"
 import { StarFilledIcon, BackpackIcon, HeartIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import MobileProduct from "../../components/MobileProduct"
+import DesktopProduct from "../../components/DesktopProduct"
 import { Link } from "react-router"
 import useCart from "../../hooks/useCart"
 import useWishlist from "../../hooks/useWishlist"
@@ -28,8 +29,8 @@ interface Item {
 
 function Sneaker() {
   const { sneakerId } = useParams()
-  const [size, setSize] = useState<string>()
-  const [gender, setGender] = useState<string>()
+  const [size, setSize] = useState<string>("")
+  const [gender, setGender] = useState<string>("")
   const { onAddToCart } = useCart()
   const { onAddToWishlist } = useWishlist()
 
@@ -69,10 +70,18 @@ function Sneaker() {
     onAddToWishlist(wishlistItem)
   }
 
+  const onChangeGender = (newGender: string) => {
+    setGender(newGender)
+  }
+
+  const onChangeSize = (newSize: string) => {
+    setSize(newSize)
+  }
+
   return (
     <>
       <Header />
-      <main className={styles.wrapper}>
+      {/* <main className={styles.wrapper}>
         <article className={styles.container}>
           <ul className={styles.images}>
             {data.data.pictures.map((pictureObject) => (
@@ -226,14 +235,23 @@ function Sneaker() {
             </button>
           </section>
         </aside>
-      </main>
-      <main className={styles.mobile}>
-        <MobileProduct
-          price={data.data.price}
-          product={data.data.name}
-          images={data.data.pictures}
-        />
-      </main>
+      </main> */}
+      <DesktopProduct
+        pictures={data.data.pictures}
+        name={data.data.name}
+        price={data.data.price}
+        gender={gender}
+        onChangeGender={onChangeGender}
+        size={size}
+        onChangeSize={onChangeSize}
+        onAddToCart={onAddToCartHandler}
+        onAddToWishlist={onAddToWishlistHandler}
+      />
+      <MobileProduct
+        price={data.data.price}
+        product={data.data.name}
+        images={data.data.pictures}
+      />
       <Footer />
     </>
   )
