@@ -2,6 +2,7 @@ import styles from "./Main.module.css"
 import Product from "../Product"
 import { useQuery } from "@tanstack/react-query"
 import { getAllSneakers } from "../../services/sneaker"
+import { motion } from "motion/react"
 
 interface Props {
   title: string
@@ -18,7 +19,11 @@ function Main({ title }: Props) {
   if (isError) return <div>{error.message}</div>
 
   return (
-    <main className={styles.wrapper}>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={styles.wrapper}
+    >
       <div className={styles.container}>
         <h1 className={styles.title}>{title}</h1>
       </div>
@@ -34,7 +39,7 @@ function Main({ title }: Props) {
           />
         ))}
       </ul>
-    </main>
+    </motion.main>
   )
 }
 
