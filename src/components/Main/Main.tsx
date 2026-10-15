@@ -13,7 +13,7 @@ function Main({ title }: Props) {
   const { isPending, isError, error, data } = useQuery({
     queryKey: ["allSneakers"],
     queryFn: getAllSneakers,
-    retry: 2,
+    retry: 3,
   })
 
   if (isPending) return <Loader />
