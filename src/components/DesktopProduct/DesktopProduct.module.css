@@ -66,7 +66,7 @@
 
 .sizes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 60px);
+  grid-template-columns: repeat(5, 60px);
   grid-auto-rows: 45px;
   gap: var(--spacing-10);
 }

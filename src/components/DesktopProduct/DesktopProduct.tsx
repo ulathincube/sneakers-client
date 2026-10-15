@@ -3,6 +3,11 @@ import { HeartIcon, StarFilledIcon, BackpackIcon } from "@radix-ui/react-icons"
 import { Link } from "react-router"
 import { motion } from "motion/react"
 
+const shoeSizes: number[] = [
+  6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 14, 15, 16,
+  17, 18,
+]
+
 interface Picture {
   id: string
   url: string
@@ -116,62 +121,22 @@ function DesktopProduct({
             </div>
           </article>
           <div className={styles.sizes}>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-06">
-                6
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-06"
-                value="6"
-                checked={size === "6"}
-                onChange={(event) => onChangeSize(event.target.value)}
-              />
-            </div>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-07">
-                7
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-07"
-                value="7"
-                checked={size === "7"}
-                onChange={(event) => onChangeSize(event.target.value)}
-              />
-            </div>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-08">
-                8
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-08"
-                value="8"
-                checked={size === "8"}
-                onChange={(event) => onChangeSize(event.target.value)}
-              />
-            </div>
-            <div className={styles.group}>
-              <label className={styles.label} htmlFor="size-09">
-                9
-              </label>
-              <input
-                className={styles.field}
-                type="radio"
-                name="size"
-                id="size-09"
-                value="9"
-                checked={size === "9"}
-                onChange={(event) => onChangeSize(event.target.value)}
-              />
-            </div>
+            {shoeSizes.map((shoeSize) => (
+              <div key={shoeSize} className={styles.group}>
+                <label className={styles.label} htmlFor={`size${shoeSize}`}>
+                  {shoeSize}
+                </label>
+                <input
+                  className={styles.field}
+                  type="radio"
+                  name="size"
+                  id={`size${shoeSize}`}
+                  value={shoeSize}
+                  checked={size === `${shoeSize}`}
+                  onChange={(event) => onChangeSize(event.target.value)}
+                />
+              </div>
+            ))}
           </div>
         </div>
         <section className={styles.actions}>
