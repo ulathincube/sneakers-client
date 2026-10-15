@@ -1,6 +1,13 @@
 import { Link } from "react-router"
 import styles from "./AccountMenu.module.css"
-import { PersonIcon } from "@radix-ui/react-icons"
+import {
+  PersonIcon,
+  IdCardIcon,
+  ReaderIcon,
+  CardStackMinusIcon,
+  HeartIcon,
+  QuestionMarkCircledIcon,
+} from "@radix-ui/react-icons"
 
 interface Props extends React.PropsWithChildren {
   title: string
@@ -34,19 +41,19 @@ function AccountMenu() {
         <PersonIcon className={styles.icon} />
       </AccountMenuItem>
       <AccountMenuItem title="Billing" description="" url="">
-        <PersonIcon className={styles.icon} />
+        <IdCardIcon className={styles.icon} />
       </AccountMenuItem>
       <AccountMenuItem title="Orders" description="" url="">
-        <PersonIcon className={styles.icon} />
+        <ReaderIcon className={styles.icon} />
       </AccountMenuItem>
       <AccountMenuItem title="Credit" description="" url="">
-        <PersonIcon className={styles.icon} />
+        <CardStackMinusIcon className={styles.icon} />
       </AccountMenuItem>
       <AccountMenuItem title="My Lists" description="" url="">
-        <PersonIcon className={styles.icon} />
+        <HeartIcon className={styles.icon} />
       </AccountMenuItem>
       <AccountMenuItem title="Support" description="" url="">
-        <PersonIcon className={styles.icon} />
+        <QuestionMarkCircledIcon className={styles.icon} />
       </AccountMenuItem>
     </main>
   )
