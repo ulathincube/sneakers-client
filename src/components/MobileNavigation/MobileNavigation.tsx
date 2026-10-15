@@ -19,7 +19,7 @@ function MobileNavigationChildren({ onHideNavigation }: Props) {
         <section>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <Link className={styles.link} to="/profile">
+              <Link className={styles.link} to="/account">
                 <span className={styles.text}>My Account</span>
                 <span className={styles.box}>
                   <CaretRightIcon className={styles.icon} />
@@ -27,8 +27,8 @@ function MobileNavigationChildren({ onHideNavigation }: Props) {
               </Link>
             </li>
             <li className={styles.item}>
-              <Link className={styles.link} to="/profile">
-                <span className={styles.text}>Wallet</span>
+              <Link className={styles.link} to="/wishlist">
+                <span className={styles.text}>My Lists</span>
                 <span className={styles.box}>
                   <CaretRightIcon className={styles.icon} />
                 </span>
@@ -36,15 +36,15 @@ function MobileNavigationChildren({ onHideNavigation }: Props) {
             </li>
             <li className={styles.item}>
               <Link className={styles.link} to="/cart">
-                <span className={styles.text}>Orders</span>
+                <span className={styles.text}>Cart</span>
                 <span className={styles.box}>
                   <CaretRightIcon className={styles.icon} />
                 </span>
               </Link>
             </li>
             <li className={styles.item}>
-              <Link className={styles.link} to="/offers">
-                <span className={styles.text}>Offers</span>
+              <Link className={styles.link} to="/">
+                <span className={styles.text}>Start Shopping</span>
                 <span className={styles.box}>
                   <CaretRightIcon className={styles.icon} />
                 </span>
