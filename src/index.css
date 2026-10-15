@@ -15,6 +15,7 @@
   --font-weight-light-bold: 500;
   --font-weight-bold: 800;
 
+  --error-color: hsl(35deg 100% 45%);
   --theme-color: hsl(300deg 100% 50%);
   --link-color: hsl(240deg 100% 40%);
   --icon-size: 24px;

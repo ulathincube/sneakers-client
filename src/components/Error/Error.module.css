@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  gap: var(--spacing-20);
+  align-items: center;
+}
+
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: var(--error-color);
+}
+
+.message {
+  color: var(--error-color);
+  font-size: var(--font-size-default);
+  font-weight: var(--font-weight-light-bold);
+}
