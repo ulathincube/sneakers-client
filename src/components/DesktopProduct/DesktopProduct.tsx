@@ -78,6 +78,7 @@ function DesktopProduct({
               <div className={styles.grouping}>
                 <label htmlFor="mens">Mens</label>
                 <input
+                  required={true}
                   className={styles.radio}
                   type="radio"
                   value="mens"
@@ -91,6 +92,7 @@ function DesktopProduct({
               <div className={styles.grouping}>
                 <label htmlFor="womens">Womens</label>
                 <input
+                  required={true}
                   className={styles.radio}
                   type="radio"
                   value="womens"

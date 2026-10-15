@@ -59,7 +59,7 @@ function Sneaker() {
     const wishlistItem: Item = {
       id: data.data.id,
       name: data.data.name,
-      size: 6,
+      size: Number(size),
       quantity: 1,
       price: data.data.price,
       pictures: data.data.pictures,
