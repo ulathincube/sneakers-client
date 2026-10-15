@@ -17,7 +17,9 @@ function AccountMenuItem({ title, description, url, children }: Props) {
           <h3 className={styles.title}>{title}</h3>
           <p className={styles.description}>{description}</p>
           <div className={styles.container}>
-            <Link to={url}>Manage</Link>
+            <Link className={styles.link} to={url}>
+              Manage
+            </Link>
           </div>
         </article>
       </figure>
@@ -28,22 +30,22 @@ function AccountMenuItem({ title, description, url, children }: Props) {
 function AccountMenu() {
   return (
     <main className={styles.wrapper}>
-      <AccountMenuItem title="Account Settings" description="" url="">
+      <AccountMenuItem title="Account" description="" url="">
         <PersonIcon className={styles.icon} />
       </AccountMenuItem>
-      <AccountMenuItem title="Account Settings" description="" url="">
+      <AccountMenuItem title="Billing" description="" url="">
         <PersonIcon className={styles.icon} />
       </AccountMenuItem>
-      <AccountMenuItem title="Account Settings" description="" url="">
+      <AccountMenuItem title="Orders" description="" url="">
         <PersonIcon className={styles.icon} />
       </AccountMenuItem>
-      <AccountMenuItem title="Account Settings" description="" url="">
+      <AccountMenuItem title="Credit" description="" url="">
         <PersonIcon className={styles.icon} />
       </AccountMenuItem>
-      <AccountMenuItem title="Account Settings" description="" url="">
+      <AccountMenuItem title="My Lists" description="" url="">
         <PersonIcon className={styles.icon} />
       </AccountMenuItem>
-      <AccountMenuItem title="Account Settings" description="" url="">
+      <AccountMenuItem title="Support" description="" url="">
         <PersonIcon className={styles.icon} />
       </AccountMenuItem>
     </main>
