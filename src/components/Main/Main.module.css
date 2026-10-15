@@ -54,6 +54,10 @@
   .products {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .title {
+    font-size: var(--font-size-medium-mobile);
+  }
 }
 
 @media screen and (max-width: 31.25rem) {
